@@ -2,55 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="dfb58794-cf26-4bf5-a722-87321a65cee6" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SchuleSZUT.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/SchuleSZUT/META-INF/SchuleSZUT.kotlin_module" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/SchuleSZUT/de/deanomus/A12_Java_Uebung_gemixt/Aufgabe1.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/SchuleSZUT/de/deanomus/A12_Java_Uebung_gemixt/Aufgabe10.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/SchuleSZUT/de/deanomus/A12_Java_Uebung_gemixt/Aufgabe12.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/SchuleSZUT/de/deanomus/A12_Java_Uebung_gemixt/Aufgabe2.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/SchuleSZUT/de/deanomus/A12_Java_Uebung_gemixt/Aufgabe5.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/SchuleSZUT/de/deanomus/A12_Java_Uebung_gemixt/Aufgabe7.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/SchuleSZUT/de/deanomus/A12_Java_Uebung_gemixt/Aufgabe8.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/SchuleSZUT/de/deanomus/A12_Java_Uebung_gemixt/Aufgabe9.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/SchuleSZUT/de/deanomus/A15_1_ArbeitsauftragArrays/ArrayEinfuehrung.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/SchuleSZUT/de/deanomus/A15_1_ArbeitsauftragArrays/Aufgabe1.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/SchuleSZUT/de/deanomus/A15_1_ArbeitsauftragArrays/Aufgabe2.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/SchuleSZUT/de/deanomus/A15_1_ArbeitsauftragArrays/Aufgabe3.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/SchuleSZUT/de/deanomus/A15_1_ArbeitsauftragArrays/Aufgabe4.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/SchuleSZUT/de/deanomus/A15_1_ArbeitsauftragArrays/Aufgabe5.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/SchuleSZUT/de/deanomus/A15_1_ArbeitsauftragArrays/Aufgabe6.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/SchuleSZUT/de/deanomus/A20_1_Mehrdimensionale_Arrays/Aufgabe1.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/SchuleSZUT/de/deanomus/A20_1_Mehrdimensionale_Arrays/Aufgabe2.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/SchuleSZUT/de/deanomus/A20_1_Mehrdimensionale_Arrays/Aufgabe3.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/SchuleSZUT/de/deanomus/A20_1_Mehrdimensionale_Arrays/Aufgabe4.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/SchuleSZUT/de/deanomus/core/Core.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/SchuleSZUT/de/deanomus/core/shit.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/SchuleSZUT/de/deanomus/util/Data.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/de/deanomus/A12_Java_Uebung_gemixt/Aufgabe1.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/de/deanomus/A12_Java_Uebung_gemixt/Aufgabe10.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/de/deanomus/A12_Java_Uebung_gemixt/Aufgabe12.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/de/deanomus/A12_Java_Uebung_gemixt/Aufgabe2.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/de/deanomus/A12_Java_Uebung_gemixt/Aufgabe5.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/de/deanomus/A12_Java_Uebung_gemixt/Aufgabe7.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/de/deanomus/A12_Java_Uebung_gemixt/Aufgabe8.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/de/deanomus/A12_Java_Uebung_gemixt/Aufgabe9.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/de/deanomus/A15_1_ArbeitsauftragArrays/ArrayEinfuehrung.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/de/deanomus/A15_1_ArbeitsauftragArrays/Aufgabe1.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/de/deanomus/A15_1_ArbeitsauftragArrays/Aufgabe2.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/de/deanomus/A15_1_ArbeitsauftragArrays/Aufgabe3.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/de/deanomus/A15_1_ArbeitsauftragArrays/Aufgabe4.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/de/deanomus/A15_1_ArbeitsauftragArrays/Aufgabe5.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/de/deanomus/A15_1_ArbeitsauftragArrays/Aufgabe6.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/de/deanomus/A20_1_Mehrdimensionale_Arrays/Aufgabe1.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/de/deanomus/A20_1_Mehrdimensionale_Arrays/Aufgabe2.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/de/deanomus/A20_1_Mehrdimensionale_Arrays/Aufgabe3.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/de/deanomus/A20_1_Mehrdimensionale_Arrays/Aufgabe4.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/de/deanomus/core/Core.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/de/deanomus/core/shit.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/de/deanomus/util/Data.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/de/deanomus/A20_1_Mehrdimensionale_Arrays/Aufgabe5.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/de/deanomus/core/Core.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/de/deanomus/core/Core.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -128,8 +82,16 @@
       <workItem from="1568887088545" duration="5348000" />
       <workItem from="1568960278510" duration="11286000" />
       <workItem from="1572247183797" duration="4732000" />
-      <workItem from="1572252087710" duration="619000" />
+      <workItem from="1572252087710" duration="1131000" />
     </task>
+    <task id="LOCAL-00001" summary="up to github">
+      <created>1572253654677</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1572253654677</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -147,5 +109,9 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="up to github" />
+    <option name="LAST_COMMIT_MESSAGE" value="up to github" />
   </component>
 </project>

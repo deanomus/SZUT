@@ -63,7 +63,10 @@ public class Core {
         } else if(kate == 3) {
             System.out.println(
                     "1 = Aufgabe 1\n" +
-                    "2 = Aufgabe 2"
+                    "2 = Aufgabe 2\n" +
+                    "3 = Aufgabe 3\n" +
+                    "4 = Aufgabe 4\n" +
+                    "5 = Aufgabe 5"
                     );
 
         }else System.out.println("Oops, Fehler! Keine Aufgaben fuer diese Kategorie gefunden :/");
@@ -98,6 +101,7 @@ public class Core {
         if(kate == 3 && aufg == 2) de.deanomus.A20_1_Mehrdimensionale_Arrays.Aufgabe2.aufg();
         if(kate == 3 && aufg == 3) de.deanomus.A20_1_Mehrdimensionale_Arrays.Aufgabe3.aufg();
         if(kate == 3 && aufg == 4) de.deanomus.A20_1_Mehrdimensionale_Arrays.Aufgabe4.aufg();
+        if(kate == 3 && aufg == 5) de.deanomus.A20_1_Mehrdimensionale_Arrays.Aufgabe4.aufg();
 
 
         if(kate== 0 && aufg == 0) return;
