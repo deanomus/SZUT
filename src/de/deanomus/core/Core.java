@@ -58,7 +58,8 @@ public class Core {
                     "3 = Aufgabe 3\n" +
                     "4 = Aufgabe 4\n" +
                     "5 = Aufgabe 5\n" +
-                    "6 = Aufgabe 6"
+                    "6 = Aufgabe 6\n" +
+                    "7 = Aufgabe 7"
             );
         } else if(kate == 3) {
             System.out.println(
@@ -69,7 +70,7 @@ public class Core {
                     "5 = Aufgabe 5"
                     );
 
-        }else System.out.println("Oops, Fehler! Keine Aufgaben fuer diese Kategorie gefunden :/");
+        } else System.out.println("Oops, Fehler! Keine Aufgaben fuer diese Kategorie gefunden :/");
 
         int aufg = Data.intScan(scan);
 
@@ -90,6 +91,7 @@ public class Core {
         if(kate== 2 && aufg == 4) de.deanomus.A15_1_ArbeitsauftragArrays.Aufgabe4.aufg();
         if(kate== 2 && aufg == 5) de.deanomus.A15_1_ArbeitsauftragArrays.Aufgabe5.aufg();
         if(kate== 2 && aufg == 6) de.deanomus.A15_1_ArbeitsauftragArrays.Aufgabe6.aufg();
+        if(kate== 2 && aufg == 7) de.deanomus.A15_1_ArbeitsauftragArrays.Aufgabe7.aufg();
         //Kategorie 3 -> Aufgaben
         if(kate == 3 && aufg == 1) de.deanomus.A20_1_Mehrdimensionale_Arrays.Aufgabe1.aufg();
         if(kate == 3 && aufg == 2) de.deanomus.A20_1_Mehrdimensionale_Arrays.Aufgabe2.aufg();
