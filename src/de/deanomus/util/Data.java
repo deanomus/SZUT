@@ -4,6 +4,9 @@ import java.util.Scanner;
 
 public class Data {
 
+    // RUN ALL
+    // 1 1 100 1 1 100 100 100 1 5 WelCHES 1 7 44 55 66 77 88 99 10 22 33 55 33 22 654 24 66 44 33 77 88 66 33 22 44 66 77 88 77 876 356 87 5 43 56 5 4 6 754 4 6765 67765 43 0 1 8 1 9 20 20 20 20 1 10 24 24 24 24 1 12 2 0 2 1 2 2 2 3 2 4 2 5 2 6 3 1 3 2 3 3 3 4 3 5
+
     public static int intScan(Scanner scan) {
         String s = scan.next();
         Integer i = null;
