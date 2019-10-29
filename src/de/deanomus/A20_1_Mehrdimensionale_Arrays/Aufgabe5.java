@@ -25,72 +25,18 @@ public class Aufgabe5 {
             for ( int spalte = 0; spalte < data[zeile].length; spalte++) {
                 int summeNachbarn = 0;
 
-                // Linker Nachbar
-//              | 0 | 0 | 0 |
-//              | 1 | X | 0 |
-//              | 0 | 0 | 0 |
-                if(spalte>0) {
-                    summeNachbarn += data[zeile][spalte-1];
-                }
-
-                //oberer Linker Nachbar
-//              | 1 | 0 | 0 |
-//              | 0 | X | 0 |
-//              | 0 | 0 | 0 |
-                if(spalte>0 && zeile>0) {
-                    summeNachbarn += data[zeile-1][spalte-1];
-                }
-                //oben
-//              | 0 | 1 | 0 |
-//              | 0 | X | 0 |
-//              | 0 | 0 | 0 |
-                if(zeile>0) {
-                    summeNachbarn += data[zeile-1][spalte];
-                }
-                //oberer Rechter Nachbar
-//              | 0 | 0 | 1 |
-//              | 0 | X | 0 |
-//              | 0 | 0 | 0 |
-                if(zeile>0 && spalte<data[zeile].length-1) {
-                    summeNachbarn += data[zeile-1][spalte+1];
-                }
-                //rechter Nachbar
-//              | 0 | 0 | 0 |
-//              | 0 | X | 1 |
-//              | 0 | 0 | 0 |
-                if(spalte<data[zeile].length-1) {
-                    summeNachbarn += data[zeile][spalte+1];
-                }
-                //unterer rechter Nachbar
-//              | 0 | 0 | 0 |
-//              | 0 | X | 0 |
-//              | 0 | 0 | 1 |
-                if(zeile<data.length-1 && spalte<data[zeile].length-1) {
-                    summeNachbarn += data[zeile+1][spalte+1];
-                }
-                //unterer Nachbar
-//              | 0 | 0 | 0 |
-//              | 0 | X | 0 |
-//              | 0 | 1 | 0 |
-                if(zeile<data.length-1) {
-                    summeNachbarn += data[zeile+1][spalte];
-                }
-                //unterer Linker Nachbar
-//              | 0 | 0 | 0 |
-//              | 0 | X | 0 |
-//              | 1 | 0 | 0 |
-                if(zeile<data.length-1 && spalte>0) {
-                    summeNachbarn += data[zeile+1][spalte-1];
-                }
+                if(spalte>0) summeNachbarn += data[zeile][spalte-1];    // Linker Nachbar
+                if(spalte>0 && zeile>0) summeNachbarn += data[zeile-1][spalte-1];   //oberer Linker Nachbar
+                if(zeile>0) summeNachbarn += data[zeile-1][spalte]; //oben
+                if(zeile>0 && spalte<data[zeile].length-1) summeNachbarn += data[zeile-1][spalte+1]; //oberer Rechter Nachbar
+                if(spalte<data[zeile].length-1) summeNachbarn += data[zeile][spalte+1]; //rechter Nachbar
+                if(zeile<data.length-1 && spalte<data[zeile].length-1) summeNachbarn += data[zeile+1][spalte+1]; //unterer rechter Nachbar
+                if(zeile<data.length-1) summeNachbarn += data[zeile+1][spalte]; //unterer Nachbar
+                if(zeile<data.length-1 && spalte>0) summeNachbarn += data[zeile+1][spalte-1]; //unterer Linker Nachbar
 
                 summeNach[zeile][spalte] += summeNachbarn;
             }
         }
-
-
-
-
-
 
 
 
