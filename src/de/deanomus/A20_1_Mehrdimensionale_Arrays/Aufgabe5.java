@@ -11,12 +11,13 @@ public class Aufgabe5 {
     public static void aufg() {
 
 
-        Integer[][] data = {
+        int[][] data = {
                 {4, 7, 2, 45},
                 {8, 3, 21, 3},
                 {56, 2, 8, 9},
                 {32, 76, 22, 3}
     };
+        int[][] summeNach = new int[data.length][data[0].length];
 
 
 
@@ -31,6 +32,7 @@ public class Aufgabe5 {
                 if(spalte>0) {
                     summeNachbarn += data[zeile][spalte-1];
                 }
+
                 //oberer Linker Nachbar
 //              | 1 | 0 | 0 |
 //              | 0 | X | 0 |
@@ -39,19 +41,53 @@ public class Aufgabe5 {
                     summeNachbarn += data[zeile-1][spalte-1];
                 }
                 //oben
+//              | 0 | 1 | 0 |
+//              | 0 | X | 0 |
+//              | 0 | 0 | 0 |
                 if(zeile>0) {
                     summeNachbarn += data[zeile-1][spalte];
                 }
                 //oberer Rechter Nachbar
-                if(zeile>0 && zeile<data[zeile].length-1) {
+//              | 0 | 0 | 1 |
+//              | 0 | X | 0 |
+//              | 0 | 0 | 0 |
+                if(zeile>0 && spalte<data[zeile].length-1) {
                     summeNachbarn += data[zeile-1][spalte+1];
                 }
                 //rechter Nachbar
+//              | 0 | 0 | 0 |
+//              | 0 | X | 1 |
+//              | 0 | 0 | 0 |
+                if(spalte<data[zeile].length-1) {
+                    summeNachbarn += data[zeile][spalte+1];
+                }
+                //unterer rechter Nachbar
+//              | 0 | 0 | 0 |
+//              | 0 | X | 0 |
+//              | 0 | 0 | 1 |
+                if(zeile<data.length-1 && spalte<data[zeile].length-1) {
+                    summeNachbarn += data[zeile+1][spalte+1];
+                }
+                //unterer Nachbar
+//              | 0 | 0 | 0 |
+//              | 0 | X | 0 |
+//              | 0 | 1 | 0 |
+                if(zeile<data.length-1) {
+                    summeNachbarn += data[zeile+1][spalte];
+                }
+                //unterer Linker Nachbar
+//              | 0 | 0 | 0 |
+//              | 0 | X | 0 |
+//              | 1 | 0 | 0 |
+                if(zeile<data.length-1 && spalte>0) {
+                    summeNachbarn += data[zeile+1][spalte-1];
+                }
 
-
-
+                summeNach[zeile][spalte] += summeNachbarn;
             }
         }
+
+
 
 
 
@@ -66,6 +102,15 @@ public class Aufgabe5 {
             {
                 System.out.print(data[zeile][spalte] + " | ");
             }
+        }
+        System.out.println("\nSumme Nachbarn:");
+        for ( int zeile=0; zeile < data.length; zeile++)
+        {
+            for ( int spalte = 0; spalte < summeNach[zeile].length; spalte++)
+            {
+                System.out.print(summeNach[zeile][spalte] + " | ");
+            }
+            System.out.println("");
         }
 
     }
