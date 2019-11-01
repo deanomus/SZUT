@@ -1,13 +1,6 @@
 package de.deanomus.core;
 
-import de.deanomus.A12_Java_Uebung_gemixt.Aufgabe1;
-import de.deanomus.A12_Java_Uebung_gemixt.Aufgabe2;
-import de.deanomus.A12_Java_Uebung_gemixt.Aufgabe5;
-import de.deanomus.A12_Java_Uebung_gemixt.Aufgabe7;
-import de.deanomus.A12_Java_Uebung_gemixt.Aufgabe8;
-import de.deanomus.A12_Java_Uebung_gemixt.Aufgabe9;
-import de.deanomus.A12_Java_Uebung_gemixt.Aufgabe10;
-import de.deanomus.A12_Java_Uebung_gemixt.Aufgabe12;
+import de.deanomus.A12_Java_Uebung_gemixt.*;
 
 import de.deanomus.trash.DurchschnittInteger;
 import de.deanomus.util.Data;
@@ -35,7 +28,7 @@ public class Core {
         System.out.println(
                         "1 = 12_Java_Uebung_gemixt\n" +
                         "2 = 15.1_ArbeitsauftragArrays\n" +
-                        "3 = 20.1_Mehrdimensionale_Arrays" +
+                        "3 = 20.1_Mehrdimensionale_Arrays\n" +
                         "4 = Trash-Mash"
         );
 
@@ -45,6 +38,8 @@ public class Core {
             System.out.println(
                             "1 = Aufgabe 1\n" +
                             "2 = Aufgabe 2\n" +
+                            "3 = Aufgabe 3\n" +
+                            "4 = Aufgabe 4\n" +
                             "5 = Aufgabe 5\n" +
                             "7 = Aufgabe 7\n" +
                             "8 = Aufgabe 8\n" +
@@ -83,6 +78,8 @@ public class Core {
         //Kategorie 1 -> Aufgaben
         if(kate== 1 && aufg == 1) Aufgabe1.aufg();
         if(kate== 1 && aufg == 2) Aufgabe2.aufg();
+        if(kate == 1 && aufg == 3) Aufgabe3.aufg();
+        if(kate == 1 && aufg == 4) Aufgabe4.aufg();
         if(kate== 1 && aufg == 5) Aufgabe5.aufg();
         if(kate== 1 && aufg == 7) Aufgabe7.aufg();
         if(kate== 1 && aufg == 8) Aufgabe8.aufg();
