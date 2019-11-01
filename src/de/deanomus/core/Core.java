@@ -9,6 +9,7 @@ import de.deanomus.A12_Java_Uebung_gemixt.Aufgabe9;
 import de.deanomus.A12_Java_Uebung_gemixt.Aufgabe10;
 import de.deanomus.A12_Java_Uebung_gemixt.Aufgabe12;
 
+import de.deanomus.trash.DurchschnittInteger;
 import de.deanomus.util.Data;
 
 import java.util.Scanner;
@@ -34,7 +35,8 @@ public class Core {
         System.out.println(
                         "1 = 12_Java_Uebung_gemixt\n" +
                         "2 = 15.1_ArbeitsauftragArrays\n" +
-                        "3 = 20.1_Mehrdimensionale_Arrays"
+                        "3 = 20.1_Mehrdimensionale_Arrays" +
+                        "4 = Trash-Mash"
         );
 
         int kate = Data.intScan(scan);
@@ -70,6 +72,10 @@ public class Core {
                     "5 = Aufgabe 5"
                     );
 
+        } else if (kate == 4) {
+            System.out.println(
+                    "1 = Durchschnitt Integer"
+            );
         } else System.out.println("Oops, Fehler! Keine Aufgaben fuer diese Kategorie gefunden :/");
 
         int aufg = Data.intScan(scan);
@@ -98,6 +104,8 @@ public class Core {
         if(kate == 3 && aufg == 3) de.deanomus.A20_1_Mehrdimensionale_Arrays.Aufgabe3.aufg();
         if(kate == 3 && aufg == 4) de.deanomus.A20_1_Mehrdimensionale_Arrays.Aufgabe4.aufg();
         if(kate == 3 && aufg == 5) de.deanomus.A20_1_Mehrdimensionale_Arrays.Aufgabe5.aufg();
+        // Kategorie 4 (Trash-Mash) -> Sachen
+        if(kate == 4 && aufg == 1) DurchschnittInteger.aufg();
         // -> Exit
         if(kate== 0 && aufg == 0) return;
 
