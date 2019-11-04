@@ -1,6 +1,7 @@
 package de.deanomus.A12_Java_Uebung_gemixt;
 
 import de.deanomus.core.Core;
+import de.deanomus.util.Data;
 
 import java.util.Scanner;
 
@@ -12,7 +13,7 @@ public class Aufgabe1 {
 
         System.out.print("Geben sie den Gesamtbetrag ein (Cent): ");
 
-        int total = scan.nextInt();
+        int total = Data.intScan(scan);
         if(total > 1000) {
             total -= (total*0.10);
         }
