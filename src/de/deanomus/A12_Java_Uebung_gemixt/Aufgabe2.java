@@ -1,6 +1,7 @@
 package de.deanomus.A12_Java_Uebung_gemixt;
 
 import de.deanomus.core.Core;
+import de.deanomus.util.Data;
 
 import java.util.Scanner;
 
@@ -16,11 +17,11 @@ public class Aufgabe2 {
 //        1 Cent pro Unterlegscheibe
 
         System.out.print("\n\nWieviele Schrauben? ");
-        int schrauben = scan.nextInt();
+        int schrauben = Data.intScan(scan);
         System.out.print("\nWieviele Muttern? ");
-        int muttern = scan.nextInt();
+        int muttern = Data.intScan(scan);
         System.out.print("\nWieviele Unterlegscheiben? ");
-        int unterlegscheiben = scan.nextInt();
+        int unterlegscheiben = Data.intScan(scan);
 
         if(schrauben > muttern) {
             System.out.print("\n\nKontrollieren sie ihre Bestellung");

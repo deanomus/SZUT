@@ -1,8 +1,5 @@
 package de.deanomus.core;
 
-import de.deanomus.A12_Java_Uebung_gemixt.*;
-
-import de.deanomus.trash.DurchschnittInteger;
 import de.deanomus.util.Data;
 
 import java.util.Scanner;
@@ -34,7 +31,9 @@ public class Core {
 
         int kate = Data.intScan(scan);
         System.out.println("\nWelche Aufgabe?:");
-        if(kate == 1) {
+        if(kate == 0) {
+            System.out.println("Exit with -> 0");
+        } else if(kate == 1) {
             System.out.println(
                             "1 = Aufgabe 1\n" +
                             "2 = Aufgabe 2\n" +
@@ -76,25 +75,25 @@ public class Core {
         int aufg = Data.intScan(scan);
 
         //Kategorie 1 -> Aufgaben
-        if(kate== 1 && aufg == 1) Aufgabe1.aufg();
-        if(kate== 1 && aufg == 2) Aufgabe2.aufg();
-        if(kate == 1 && aufg == 3) Aufgabe3.aufg();
-        if(kate == 1 && aufg == 4) Aufgabe4.aufg();
-        if(kate== 1 && aufg == 5) Aufgabe5.aufg();
-        if(kate== 1 && aufg == 7) Aufgabe7.aufg();
-        if(kate== 1 && aufg == 8) Aufgabe8.aufg();
-        if(kate== 1 && aufg == 9) Aufgabe9.aufg();
-        if(kate== 1 && aufg == 10) Aufgabe10.aufg();
-        if(kate== 1 && aufg == 12) Aufgabe12.aufg();
+        if(kate == 1 && aufg == 1)  de.deanomus.A12_Java_Uebung_gemixt.Aufgabe1.aufg();
+        if(kate == 1 && aufg == 2)  de.deanomus.A12_Java_Uebung_gemixt.Aufgabe2.aufg();
+        if(kate == 1 && aufg == 3)  de.deanomus.A12_Java_Uebung_gemixt.Aufgabe3.aufg();
+        if(kate == 1 && aufg == 4)  de.deanomus.A12_Java_Uebung_gemixt.Aufgabe4.aufg();
+        if(kate == 1 && aufg == 5)  de.deanomus.A12_Java_Uebung_gemixt.Aufgabe5.aufg();
+        if(kate == 1 && aufg == 7)  de.deanomus.A12_Java_Uebung_gemixt.Aufgabe7.aufg();
+        if(kate == 1 && aufg == 8)  de.deanomus.A12_Java_Uebung_gemixt.Aufgabe8.aufg();
+        if(kate == 1 && aufg == 9)  de.deanomus.A12_Java_Uebung_gemixt.Aufgabe9.aufg();
+        if(kate == 1 && aufg == 10) de.deanomus.A12_Java_Uebung_gemixt.Aufgabe10.aufg();
+        if(kate == 1 && aufg == 12) de.deanomus.A12_Java_Uebung_gemixt.Aufgabe12.aufg();
         //Kategorie 2 -> Aufgaben
-        if(kate== 2 && aufg == 0) de.deanomus.A15_1_ArbeitsauftragArrays.ArrayEinfuehrung.aufg();
-        if(kate== 2 && aufg == 1) de.deanomus.A15_1_ArbeitsauftragArrays.Aufgabe1.aufg();
-        if(kate== 2 && aufg == 2) de.deanomus.A15_1_ArbeitsauftragArrays.Aufgabe2.aufg();
-        if(kate== 2 && aufg == 3) de.deanomus.A15_1_ArbeitsauftragArrays.Aufgabe3.aufg();
-        if(kate== 2 && aufg == 4) de.deanomus.A15_1_ArbeitsauftragArrays.Aufgabe4.aufg();
-        if(kate== 2 && aufg == 5) de.deanomus.A15_1_ArbeitsauftragArrays.Aufgabe5.aufg();
-        if(kate== 2 && aufg == 6) de.deanomus.A15_1_ArbeitsauftragArrays.Aufgabe6.aufg();
-        if(kate== 2 && aufg == 7) de.deanomus.A15_1_ArbeitsauftragArrays.Aufgabe7.aufg();
+        if(kate == 2 && aufg == 0) de.deanomus.A15_1_ArbeitsauftragArrays.ArrayEinfuehrung.aufg();
+        if(kate == 2 && aufg == 1) de.deanomus.A15_1_ArbeitsauftragArrays.Aufgabe1.aufg();
+        if(kate == 2 && aufg == 2) de.deanomus.A15_1_ArbeitsauftragArrays.Aufgabe2.aufg();
+        if(kate == 2 && aufg == 3) de.deanomus.A15_1_ArbeitsauftragArrays.Aufgabe3.aufg();
+        if(kate == 2 && aufg == 4) de.deanomus.A15_1_ArbeitsauftragArrays.Aufgabe4.aufg();
+        if(kate == 2 && aufg == 5) de.deanomus.A15_1_ArbeitsauftragArrays.Aufgabe5.aufg();
+        if(kate == 2 && aufg == 6) de.deanomus.A15_1_ArbeitsauftragArrays.Aufgabe6.aufg();
+        if(kate == 2 && aufg == 7) de.deanomus.A15_1_ArbeitsauftragArrays.Aufgabe7.aufg();
         //Kategorie 3 -> Aufgaben
         if(kate == 3 && aufg == 1) de.deanomus.A20_1_Mehrdimensionale_Arrays.Aufgabe1.aufg();
         if(kate == 3 && aufg == 2) de.deanomus.A20_1_Mehrdimensionale_Arrays.Aufgabe2.aufg();
@@ -102,12 +101,12 @@ public class Core {
         if(kate == 3 && aufg == 4) de.deanomus.A20_1_Mehrdimensionale_Arrays.Aufgabe4.aufg();
         if(kate == 3 && aufg == 5) de.deanomus.A20_1_Mehrdimensionale_Arrays.Aufgabe5.aufg();
         // Kategorie 4 (Trash-Mash) -> Sachen
-        if(kate == 4 && aufg == 1) DurchschnittInteger.aufg();
+        if(kate == 4 && aufg == 1) de.deanomus.trash.DurchschnittInteger.aufg();
         // -> Exit
-        if(kate== 0 && aufg == 0) return;
+        if(kate == 0 && aufg == 0) return;
 
 
-        System.out.print("\n");
+        System.out.println();
         choose();
 
     }
