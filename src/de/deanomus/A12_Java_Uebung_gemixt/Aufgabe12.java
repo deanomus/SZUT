@@ -9,7 +9,7 @@ public class Aufgabe12 {
     static Scanner scan = Core.scan;
 
     public static void aufg() {
-        System.out.print("Hallo");
+        System.out.print("Test");
         return;
     }
 
