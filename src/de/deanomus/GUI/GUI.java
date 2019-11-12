@@ -1,5 +1,7 @@
 package de.deanomus.GUI;
 
+import de.deanomus.GUI.gameoflife.GameOfLife;
+
 import javax.swing.*;
 import javax.swing.border.Border;
 import javax.swing.border.LineBorder;
@@ -7,7 +9,8 @@ import java.awt.*;
 
 public class GUI extends javax.swing.JFrame {
 
-    static GUI frame;
+    public static GUI frame;
+    public static JTabbedPane tabpane;
 
 
     public static void gui() {
@@ -18,27 +21,18 @@ public class GUI extends javax.swing.JFrame {
         frame.setResizable(false);
 
 
-
-        Border border = new LineBorder(Color.GREEN);
-        JMenuBar bar = new JMenuBar();
-        bar.setBorder(border);
-
-
-        JMenu game = new JMenu("GameOfLife");
-        JMenuItem gamestart = new JMenuItem("Start");
-        JMenuItem gamepause = new JMenuItem("Pause");
+        JPanel panelRot = new JPanel();
+        JPanel panelGreen = new JPanel();
+        panelRot.setBackground(Color.RED);
+        panelGreen.setBackground(Color.GREEN);
 
 
-
-        game.add(gamestart);
-        game.add(gamepause);
-        bar.add(game);
-
+        tabpane = new JTabbedPane(JTabbedPane.TOP, JTabbedPane.SCROLL_TAB_LAYOUT);
+        tabpane.add(panelRot, "RED");
+        tabpane.add(panelGreen, "GREEN");
 
 
-
-        bar.add(game);
-        frame.setJMenuBar(bar);
+        frame.add(tabpane);
         frame.setVisible(true);
     }
 
