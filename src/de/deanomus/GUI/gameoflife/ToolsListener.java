@@ -2,7 +2,6 @@ package de.deanomus.GUI.gameoflife;
 
 import de.deanomus.GUI.GUI;
 
-import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
@@ -11,7 +10,7 @@ public class ToolsListener implements ActionListener {
     public void actionPerformed(ActionEvent ae) {
 
         if(ae.getSource().equals(GameOfLife.start)) {
-            System.out.println("! START !");
+            // START / PAUSE BUTTON HERE
         } else if(ae.getSource().equals(GameOfLife.reset)) {
             GUI.frame.setVisible(false);
             for ( int row=0; row < GameOfLife.rows; row++) {

@@ -13,9 +13,6 @@ public class ButtonListener implements ActionListener {
 
     @Override
     public void actionPerformed(ActionEvent ae) {
-        System.out.println("Listener: " + ae.getActionCommand());
-
-
 
         for ( int row=0; row < GameOfLife.rows; row++) {
             for ( int col = 0; col < GameOfLife.cols; col++) {
@@ -32,24 +29,6 @@ public class ButtonListener implements ActionListener {
 
             }
         }
-
-
-
-
-//        Integer i = Integer.parseInt(GUI.button.getText()) + 1;
-//        if(!GUI.green) {
-//            GUI.button.setBackground(Color.GREEN);
-//            GUI.green = true;
-//            GameOfLife.gameofpanel.setBackground(Color.RED);
-//
-//
-//            GUI.button.setText(i.toString());
-//        } else {
-//            GUI.button.setBackground(Color.RED);
-//            GUI.green = false;
-//            GameOfLife.gameofpanel.setBackground(Color.GREEN);
-//            GUI.button.setText(i.toString());
-//        }
 
     }
 }
