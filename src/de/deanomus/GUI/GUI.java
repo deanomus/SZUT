@@ -1,5 +1,6 @@
 package de.deanomus.GUI;
 
+import de.deanomus.GUI.gameoflife.ButtonListener;
 import de.deanomus.GUI.gameoflife.GameOfLife;
 
 import javax.swing.*;
@@ -11,14 +12,20 @@ public class GUI extends javax.swing.JFrame {
 
     public static GUI frame;
     public static JTabbedPane tabpane;
+    static ButtonListener listener;
+
+    public static Boolean green = false;
 
 
     public static void gui() {
         frame = new GUI();
         frame.setTitle("Game Of Life - SZUT");
-        frame.setSize(1000, 720);
+        frame.setSize(1000, 1000);
         frame.setLocation(50,50);
-        frame.setResizable(false);
+        frame.setResizable(true);
+
+        listener = new ButtonListener();
+
 
 
         JPanel panelRot = new JPanel();
@@ -28,9 +35,6 @@ public class GUI extends javax.swing.JFrame {
 
 
         tabpane = new JTabbedPane(JTabbedPane.TOP, JTabbedPane.SCROLL_TAB_LAYOUT);
-        tabpane.add(panelRot, "RED");
-        tabpane.add(panelGreen, "GREEN");
-
         tabpane.add(GameOfLife.gameofpanel, "GameOfLife");
 
 
