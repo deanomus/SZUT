@@ -31,6 +31,8 @@ public class GUI extends javax.swing.JFrame {
         tabpane.add(panelRot, "RED");
         tabpane.add(panelGreen, "GREEN");
 
+        tabpane.add(GameOfLife.gameofpanel, "GameOfLife");
+
 
         frame.add(tabpane);
         frame.setVisible(true);
