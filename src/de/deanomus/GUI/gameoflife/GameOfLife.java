@@ -15,7 +15,7 @@ public class GameOfLife {
     public static void start() {
 
         gameofpanel = new JPanel();
-        gameofpanel.setBackground(Color.RED);
+        gameofpanel.setBackground(Color.YELLOW);
 
         System.out.println("\nStarte grafische Oberfläche...");
         GUI.gui();
