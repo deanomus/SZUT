@@ -1,8 +1,5 @@
 package de.deanomus.A20_1_Mehrdimensionale_Arrays;
 
-import de.deanomus.core.Core;
-
-import java.util.Scanner;
 
 public class Aufgabe1 {
 
@@ -14,10 +11,6 @@ public class Aufgabe1 {
 //        funktioniert, wenn die Dimensionen der Zeilen und
 //    Spalten geändert werden. (Mit anderen Worten,
 //    verwenden Sie eher length als fest kodierte Zahlen).
-
-
-
-    Scanner scan = Core.scan;
 
     public static void aufg() {
 

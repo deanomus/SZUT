@@ -1,12 +1,7 @@
 package de.deanomus.A15_1_ArbeitsauftragArrays;
 
-import de.deanomus.core.Core;
-
-import java.util.Scanner;
 
 public class Aufgabe7 {
-
-    Scanner scan = Core.scan;
 
     public static void aufg() {
 

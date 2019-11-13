@@ -1,13 +1,9 @@
 package de.deanomus.A20_1_Mehrdimensionale_Arrays;
 
-import de.deanomus.core.Core;
-
 import java.util.HashMap;
-import java.util.Scanner;
 
 public class Aufgabe3 {
 
-    Scanner scan = Core.scan;
     public static HashMap<Integer, Integer> summen = new HashMap<Integer, Integer>();
 
     public static void aufg() {
