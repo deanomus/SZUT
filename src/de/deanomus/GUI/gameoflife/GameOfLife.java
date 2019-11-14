@@ -19,8 +19,8 @@ public class GameOfLife {
 
 
     public static int
-                rows,
-                cols;
+                rows = 20,
+                cols = 20;
 
     public static JButton[][] button;
     public static Boolean[][] active;
@@ -29,12 +29,12 @@ public class GameOfLife {
 
     public static void start() {
 
-        System.out.print("\nEingabe rows: ");
-        rows = Data.intScan(scan);
-        System.out.println("Debug: " + rows);
-        System.out.print("Eingabe cols: ");
-        cols = Data.intScan(scan);
-        System.out.println("Debug: " + cols);
+//        System.out.print("\nEingabe rows: ");
+//        rows = Data.intScan(scan);
+//        System.out.println("Debug: " + rows);
+//        System.out.print("Eingabe cols: ");
+//        cols = Data.intScan(scan);
+//        System.out.println("Debug: " + cols);
 
         button = new JButton[rows][cols];
         active = new Boolean[rows][cols];
