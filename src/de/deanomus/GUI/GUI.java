@@ -25,12 +25,6 @@ public class GUI extends javax.swing.JFrame {
 
 
 
-        JPanel panelRot = new JPanel();
-        JPanel panelGreen = new JPanel();
-        panelRot.setBackground(Color.RED);
-        panelGreen.setBackground(Color.GREEN);
-
-
         tabpane = new JTabbedPane(JTabbedPane.TOP, JTabbedPane.SCROLL_TAB_LAYOUT);
         tabpane.add(GameOfLife.gameofpanel, "GameOfLife");
 
