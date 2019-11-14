@@ -27,6 +27,11 @@ public class GameOfLife {
     public static JButton toggle, reset, all, halfvorlage, rdmvorlage;
     public static Boolean go = false;
 
+
+    public static Color
+                        colorInactive = Color.RED,
+                        colorActive = Color.GREEN;
+
     public static void start() {
 
 //        System.out.print("\nEingabe rows: ");
