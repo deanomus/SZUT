@@ -30,7 +30,8 @@ public class GameOfLife {
 
     public static Color
                         colorInactive = Color.RED,
-                        colorActive = Color.GREEN;
+                        colorActive = Color.GREEN,
+                        colorBackground = Color.BLACK;
 
     public static void startPanel() {
 
@@ -46,6 +47,7 @@ public class GameOfLife {
 
         gameofpanel = new JPanel();
         gameofpanel.setLayout(new GridLayout(rows, cols));
+        gameofpanel.setBackground(colorBackground);
 
 
         tools = new JToolBar();
@@ -54,6 +56,10 @@ public class GameOfLife {
 
         toggle = new JButton("Start");
         reset = new JButton("Reset");
+
+        tools.setBackground(colorBackground);
+        toggle.setBackground(colorInactive);
+        reset.setBackground(colorActive);
 
 
         toggle.addActionListener(toolsLis);
@@ -93,11 +99,13 @@ public class GameOfLife {
     public static void startGame() {
         go = true;
         toggle.setText("Stopp");
+        toggle.setBackground(colorActive);
     }
 
     public static void stopGame() {
         go = false;
         toggle.setText("Start");
+        toggle.setBackground(colorInactive);
     }
 
     public static void toggleGame() {

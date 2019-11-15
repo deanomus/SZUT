@@ -1,5 +1,7 @@
 package de.deanomus.GUI.gameoflife.vorlagen;
 
+import de.deanomus.GUI.gameoflife.GameOfLife;
+
 import javax.swing.*;
 import java.awt.*;
 
@@ -19,7 +21,7 @@ public class VorlagenPanel {
     public static void start() {
 
         vorlagenPanel = new JPanel();
-        vorlagenPanel.setBackground(Color.RED);
+        vorlagenPanel.setBackground(GameOfLife.colorBackground);
 
         AllActiveV = new JButton("All-Active");
         halfV = new JButton("Half");
@@ -32,9 +34,9 @@ public class VorlagenPanel {
         halfV.addActionListener(listener);
         rdmV.addActionListener(listener);
 
-        AllActiveV.setBackground(Color.GREEN);
-        halfV.setBackground(Color.GREEN);
-        rdmV.setBackground(Color.GREEN);
+        AllActiveV.setBackground(GameOfLife.colorActive);
+        halfV.setBackground(GameOfLife.colorActive);
+        rdmV.setBackground(GameOfLife.colorActive);
 
 
         vorlagenPanel.add(AllActiveV);
