@@ -6,9 +6,6 @@ import de.deanomus.GUI.gameoflife.vorlagen.VorlagenPanel;
 import de.deanomus.GUI.options.OptionsPanel;
 
 import javax.swing.*;
-import javax.swing.border.Border;
-import javax.swing.border.LineBorder;
-import java.awt.*;
 
 public class GUI extends javax.swing.JFrame {
 
@@ -24,7 +21,7 @@ public class GUI extends javax.swing.JFrame {
         frame.setResizable(true);
 
 
-        GameOfLife.start();
+        GameOfLife.startPanel();
         OptionsPanel.start();
         VorlagenPanel.start();
 

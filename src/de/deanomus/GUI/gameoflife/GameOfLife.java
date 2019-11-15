@@ -32,7 +32,7 @@ public class GameOfLife {
                         colorInactive = Color.RED,
                         colorActive = Color.GREEN;
 
-    public static void start() {
+    public static void startPanel() {
 
 //        System.out.print("\nEingabe rows: ");
 //        rows = Data.intScan(scan);
@@ -86,6 +86,24 @@ public class GameOfLife {
 
         checkLOOP.check();
 
+    }
+
+
+
+    public static void startGame() {
+        go = true;
+        toggle.setText("Stopp");
+    }
+
+    public static void stopGame() {
+        go = false;
+        toggle.setText("Start");
+    }
+
+    public static void toggleGame() {
+        if(go) {
+            stopGame();
+        } else startGame();
     }
 
 

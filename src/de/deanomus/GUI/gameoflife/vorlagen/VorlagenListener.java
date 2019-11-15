@@ -1,5 +1,6 @@
 package de.deanomus.GUI.gameoflife.vorlagen;
 
+import de.deanomus.GUI.gameoflife.GameOfLife;
 import de.deanomus.GUI.gameoflife.Utils;
 
 import java.awt.event.ActionEvent;
@@ -9,7 +10,7 @@ public class VorlagenListener implements ActionListener {
     @Override
     public void actionPerformed(ActionEvent ae) {
 
-
+        GameOfLife.stopGame();
         if(ae.getSource().equals(VorlagenPanel.AllActiveV)) {
             allActive.execute();
         } else if(ae.getSource().equals(VorlagenPanel.halfV)) {
