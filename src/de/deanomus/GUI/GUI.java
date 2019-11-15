@@ -2,6 +2,8 @@ package de.deanomus.GUI;
 
 import de.deanomus.GUI.gameoflife.ButtonListener;
 import de.deanomus.GUI.gameoflife.GameOfLife;
+import de.deanomus.GUI.gameoflife.vorlagen.VorlagenPanel;
+import de.deanomus.GUI.options.OptionsPanel;
 
 import javax.swing.*;
 import javax.swing.border.Border;
@@ -21,12 +23,17 @@ public class GUI extends javax.swing.JFrame {
         frame.setLocation(50,50);
         frame.setResizable(true);
 
-        listener = new ButtonListener();
+
+        GameOfLife.start();
+        OptionsPanel.start();
+        VorlagenPanel.start();
 
 
 
         tabpane = new JTabbedPane(JTabbedPane.TOP, JTabbedPane.SCROLL_TAB_LAYOUT);
         tabpane.add(GameOfLife.gameofpanel, "GameOfLife");
+        tabpane.add(OptionsPanel.optionsPanel, "Settings");
+        tabpane.add(VorlagenPanel.vorlagenPanel, "Vorlagen");
 
 
         frame.add(tabpane);

@@ -103,7 +103,7 @@ public class Core {
         if(kate == 3 && aufg == 5) de.deanomus.A20_1_Mehrdimensionale_Arrays.Aufgabe5.aufg();
         // Kategorie 4 (Trash-Mash) -> Sachen
         if(kate == 4 && aufg == 1) de.deanomus.trash.DurchschnittInteger.aufg();
-        if(kate == 4 && aufg == 2) de.deanomus.GUI.gameoflife.GameOfLife.start();
+        if(kate == 4 && aufg == 2) de.deanomus.GUI.GUI.gui();
         // -> Exit
         if(kate == 0 && aufg == 0) return;
 

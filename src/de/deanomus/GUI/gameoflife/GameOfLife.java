@@ -24,7 +24,7 @@ public class GameOfLife {
 
     public static JButton[][] button;
     public static Boolean[][] active;
-    public static JButton toggle, reset, all, halfvorlage, rdmvorlage;
+    public static JButton toggle, reset;
     public static Boolean go = false;
 
 
@@ -44,8 +44,6 @@ public class GameOfLife {
         button = new JButton[rows][cols];
         active = new Boolean[rows][cols];
 
-        System.out.println("\nStarte grafische Oberfläche...");
-
         gameofpanel = new JPanel();
         gameofpanel.setLayout(new GridLayout(rows, cols));
 
@@ -56,22 +54,13 @@ public class GameOfLife {
 
         toggle = new JButton("Start");
         reset = new JButton("Reset");
-        all = new JButton("All-Active");
-        halfvorlage = new JButton("Half");
-        rdmvorlage = new JButton("rdm");
 
 
         toggle.addActionListener(toolsLis);
         reset.addActionListener(toolsLis);
-        all.addActionListener(toolsLis);
-        halfvorlage.addActionListener(toolsLis);
-        rdmvorlage.addActionListener(toolsLis);
 
         tools.add(toggle);
         tools.add(reset);
-        tools.add(all);
-        tools.add(halfvorlage);
-        tools.add(rdmvorlage);
 
         gameofpanel.add(tools);
 
@@ -94,7 +83,6 @@ public class GameOfLife {
 
         Utils.checkAllForActive();
 
-        GUI.gui();
 
         checkLOOP.check();
 
