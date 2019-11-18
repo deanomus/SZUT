@@ -19,12 +19,14 @@ public class FeuerPanel {
     public static int
                     OK = 0,
                     fire = 1,
-                    water = 2;
+                    water = 2,
+                    stone = 3;
 
     public static Color
                     colorOK = GameOfLife.colorActive,
                     colorFire = GameOfLife.colorInactive,
-                    colorWater = Color.BLUE;
+                    colorWater = Color.BLUE,
+                    colorStone = Color.WHITE;
 
     public static void start() {
         field = new JButton[rows][cols];
