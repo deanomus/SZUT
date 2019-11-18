@@ -1,5 +1,6 @@
 # SZUT - Schulzentrum Utbremen
 ## Anwendungsentwicklung
+Builded jar: [Download](https://github.com/deanomus/SZUT/raw/master/out/artifacts/SchuleSZUT_jar/SchuleSZUT.jar)
 
 ###### Aufgaben:
 :x: 12_Java_Uebung_gemixt | :white_check_mark: 15.1_ArbeitsauftragArrays | :white_check_mark: 20.1_Mehrdimensionale 
