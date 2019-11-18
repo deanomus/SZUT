@@ -47,18 +47,22 @@ public class Check {
                         FeuerPanel.fieldStatus[row][col] = FeuerPanel.OK;
                         FeuerPanel.field[row][col].setBackground(FeuerPanel.colorOK);
                         FeuerPanel.field[row][col].setText(String.valueOf(FeuerPanel.OK));
+                        FeuerPanel.field[row][col].setForeground(FeuerPanel.colorOK);
                     } else if (after[row][col] == FeuerPanel.fire) {
                         FeuerPanel.fieldStatus[row][col] = FeuerPanel.fire;
                         FeuerPanel.field[row][col].setBackground(FeuerPanel.colorFire);
                         FeuerPanel.field[row][col].setText(String.valueOf(FeuerPanel.fire));
+                        FeuerPanel.field[row][col].setForeground(FeuerPanel.colorFire);
                     } else if (after[row][col] == FeuerPanel.water) {
                         FeuerPanel.fieldStatus[row][col] = FeuerPanel.water;
-                        FeuerPanel.field[row][col].setBackground(FeuerPanel.colorWater);
-                        FeuerPanel.field[row][col].setText(String.valueOf(FeuerPanel.water));
+                        FeuerPanel.field[row][col].setBackground(FeuerPanel.colorFire);
+                        FeuerPanel.field[row][col].setText("X");
+                        FeuerPanel.field[row][col].setForeground(FeuerPanel.colorWater);
                     } else if (after[row][col] == FeuerPanel.stone) {
                         FeuerPanel.fieldStatus[row][col] = FeuerPanel.stone;
                         FeuerPanel.field[row][col].setBackground(FeuerPanel.colorStone);
                         FeuerPanel.field[row][col].setText(String.valueOf(FeuerPanel.stone));
+                        FeuerPanel.field[row][col].setForeground(FeuerPanel.colorStone);
                     }
                 }
             }

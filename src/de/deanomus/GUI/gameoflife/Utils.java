@@ -14,9 +14,11 @@ public class Utils {
                 if(GameOfLife.active[row][col]) {
                     GameOfLife.button[row][col].setBackground(GameOfLife.colorActive);
                     GameOfLife.button[row][col].setText("X");
+                    GameOfLife.button[row][col].setForeground(GameOfLife.colorActive);
                 } else {
                     GameOfLife.button[row][col].setBackground(GameOfLife.colorInactive);
                     GameOfLife.button[row][col].setText("O");
+                    GameOfLife.button[row][col].setForeground(GameOfLife.colorInactive);
                 }
             }
         }

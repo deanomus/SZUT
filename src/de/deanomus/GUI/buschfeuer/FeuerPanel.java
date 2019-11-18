@@ -45,6 +45,7 @@ public class FeuerPanel {
                 field[row][col] = new JButton();
                 field[row][col].setBackground(colorOK);
                 field[row][col].setText(String.valueOf(OK));
+                field[row][col].setForeground(colorOK);
                 field[row][col].addActionListener(listener);
                 firePanel.add(field[row][col]);
             }
