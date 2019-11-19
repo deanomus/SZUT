@@ -1,6 +1,8 @@
 package de.deanomus.GUI;
 
 import de.deanomus.GUI.buschfeuer.FeuerPanel;
+import de.deanomus.GUI.choose.ChooseListener;
+import de.deanomus.GUI.choose.ChoosePanel;
 import de.deanomus.GUI.gameoflife.ButtonListener;
 import de.deanomus.GUI.gameoflife.GameOfLife;
 import de.deanomus.GUI.gameoflife.vorlagen.VorlagenPanel;
@@ -21,17 +23,14 @@ public class GUI extends javax.swing.JFrame {
         frame.setLocation(50,50);
         frame.setResizable(true);
 
-
-        GameOfLife.startPanel();
-        OptionsPanel.start();
+        ChoosePanel.start();
         VorlagenPanel.start();
         FeuerPanel.start();
 
 
 
         tabpane = new JTabbedPane(JTabbedPane.TOP, JTabbedPane.SCROLL_TAB_LAYOUT);
-        tabpane.add(GameOfLife.gameofpanel, "GameOfLife");
-        tabpane.add(OptionsPanel.optionsPanel, "Settings");
+        tabpane.add(ChoosePanel.choosePanel, "Wähle");
         tabpane.add(VorlagenPanel.vorlagenPanel, "Vorlagen");
         tabpane.add(FeuerPanel.firePanel, "Buschfeuer");
 
