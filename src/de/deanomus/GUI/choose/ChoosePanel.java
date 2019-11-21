@@ -1,5 +1,7 @@
 package de.deanomus.GUI.choose;
 
+import de.deanomus.GUI.gameoflife.GameOfLife;
+
 import javax.swing.*;
 
 public class ChoosePanel {
@@ -25,6 +27,11 @@ public class ChoosePanel {
         settings.addActionListener(listener);
         vorlagen.addActionListener(listener);
         buschfeuer.addActionListener(listener);
+
+        showgameoflife.setBackground(GameOfLife.colorInactive);
+        settings.setBackground(GameOfLife.colorInactive);
+        vorlagen.setBackground(GameOfLife.colorInactive);
+        buschfeuer.setBackground(GameOfLife.colorInactive);
 
         choosePanel.add(showgameoflife);
         choosePanel.add(settings);

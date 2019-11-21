@@ -24,15 +24,11 @@ public class GUI extends javax.swing.JFrame {
         frame.setResizable(true);
 
         ChoosePanel.start();
-        VorlagenPanel.start();
-        FeuerPanel.start();
 
 
 
         tabpane = new JTabbedPane(JTabbedPane.TOP, JTabbedPane.SCROLL_TAB_LAYOUT);
         tabpane.add(ChoosePanel.choosePanel, "Wähle");
-        tabpane.add(VorlagenPanel.vorlagenPanel, "Vorlagen");
-        tabpane.add(FeuerPanel.firePanel, "Buschfeuer");
 
         frame.add(tabpane);
         frame.setVisible(true);
