@@ -10,60 +10,48 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 public class ChooseListener implements ActionListener {
-    static Boolean
-            showGameLife = false,
-            showSettings = false,
-            showVorlagen = false,
-            buschfeuer = false;
 
     @Override
     public void actionPerformed(ActionEvent actionEvent) {
 
         if(actionEvent.getSource().equals(ChoosePanel.showgameoflife)) {
-            if(showGameLife) {
+            if(Check.activePanels.contains(ChoosePanel.showgameoflife)) {
                 GUI.tabpane.remove(GameOfLife.gameofpanel);
-                ChoosePanel.showgameoflife.setBackground(GameOfLife.colorInactive);
-                showGameLife = false;
+                Check.remove(ChoosePanel.showgameoflife);
             } else {
                 GameOfLife.startPanel();
                 GUI.tabpane.add(GameOfLife.gameofpanel, "GameOfLife");
-                ChoosePanel.showgameoflife.setBackground(GameOfLife.colorActive);
-                showGameLife = true;
+                Check.add(ChoosePanel.showgameoflife);
             }
         } else if(actionEvent.getSource().equals(ChoosePanel.settings)) {
-            if(showSettings) {
+            if(Check.activePanels.contains(ChoosePanel.settings)) {
                 GUI.tabpane.remove(OptionsPanel.optionsPanel);
-                ChoosePanel.settings.setBackground(GameOfLife.colorInactive);
-                showSettings = false;
+                Check.remove(ChoosePanel.settings);
             } else {
                 OptionsPanel.start();
                 GUI.tabpane.add(OptionsPanel.optionsPanel, "Settings");
-                ChoosePanel.settings.setBackground(GameOfLife.colorActive);
-                showSettings = true;
+                Check.add(ChoosePanel.settings);
             }
         } else if(actionEvent.getSource().equals(ChoosePanel.vorlagen)) {
-            if(showVorlagen) {
+            if(Check.activePanels.contains(ChoosePanel.vorlagen)) {
                 GUI.tabpane.remove(VorlagenPanel.vorlagenPanel);
-                ChoosePanel.vorlagen.setBackground(GameOfLife.colorInactive);
-                showVorlagen = false;
+                Check.remove(ChoosePanel.vorlagen);
             } else {
                 VorlagenPanel.start();
                 GUI.tabpane.add(VorlagenPanel.vorlagenPanel, "Vorlagen");
-                ChoosePanel.vorlagen.setBackground(GameOfLife.colorActive);
-                showVorlagen = true;
+                Check.add(ChoosePanel.vorlagen);
             }
         } else if(actionEvent.getSource().equals(ChoosePanel.buschfeuer)) {
-            if(buschfeuer) {
+            if(Check.activePanels.contains(ChoosePanel.buschfeuer)) {
                 GUI.tabpane.remove(FeuerPanel.firePanel);
-                ChoosePanel.buschfeuer.setBackground(GameOfLife.colorInactive);
-                buschfeuer = false;
+                Check.remove(ChoosePanel.buschfeuer);
             } else {
                 FeuerPanel.start();
                 GUI.tabpane.add(FeuerPanel.firePanel, "Buschfeuer");
-                ChoosePanel.buschfeuer.setBackground(GameOfLife.colorActive);
-                buschfeuer = true;
+                Check.add(ChoosePanel.buschfeuer);
             }
         }
+        Check.all();
 
     }
 }

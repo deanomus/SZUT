@@ -28,15 +28,17 @@ public class ChoosePanel {
         vorlagen.addActionListener(listener);
         buschfeuer.addActionListener(listener);
 
-        showgameoflife.setBackground(GameOfLife.colorInactive);
-        settings.setBackground(GameOfLife.colorInactive);
-        vorlagen.setBackground(GameOfLife.colorInactive);
-        buschfeuer.setBackground(GameOfLife.colorInactive);
+        Check.remove(showgameoflife);
+        Check.remove(settings);
+        Check.remove(vorlagen);
+        Check.remove(buschfeuer);
 
         choosePanel.add(showgameoflife);
         choosePanel.add(settings);
         choosePanel.add(vorlagen);
         choosePanel.add(buschfeuer);
+
+        Check.all();
 
 
     }
