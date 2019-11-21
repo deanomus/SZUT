@@ -1,5 +1,9 @@
 package de.deanomus.GUI.buschfeuer;
 
+import de.deanomus.GUI.gameoflife.GameOfLife;
+
+import java.awt.*;
+
 public class Check {
 
 
@@ -65,6 +69,24 @@ public class Check {
                         FeuerPanel.field[row][col].setForeground(FeuerPanel.colorStone);
                     }
                 }
+            }
+        }
+        gameover();
+    }
+
+
+    public static void gameover() {
+        for ( int row=0; row < FeuerPanel.rows; row++) {
+            for ( int col = 0; col < FeuerPanel.cols; col++) {
+                if(FeuerPanel.fieldStatus[row][col] == FeuerPanel.OK) {
+                    return;
+                }
+            }
+        }
+        for ( int row=0; row < FeuerPanel.rows; row++) {
+            for ( int col = 0; col < FeuerPanel.cols; col++) {
+                FeuerPanel.fieldStatus[row][col] = FeuerPanel.OK;
+                FeuerPanel.field[row][col].setBackground(Color.BLACK);
             }
         }
     }
