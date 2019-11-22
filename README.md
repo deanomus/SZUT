@@ -14,7 +14,7 @@ Builded jar: [Download](https://github.com/deanomus/SZUT/raw/master/out/artifact
 :white_check_mark: [Aufgabe 7](https://github.com/deanomus/SZUT/blob/master/src/de/deanomus/A12_Java_Uebung_gemixt/Aufgabe7.java) | :white_check_mark: [Aufgabe 7](https://github.com/deanomus/SZUT/blob/master/src/de/deanomus/A15_1_ArbeitsauftragArrays/Aufgabe7.java)
 :white_check_mark: [Aufgabe 8](https://github.com/deanomus/SZUT/blob/master/src/de/deanomus/A12_Java_Uebung_gemixt/Aufgabe8.java)
 :white_check_mark: [Aufgabe 9](https://github.com/deanomus/SZUT/blob/master/src/de/deanomus/A12_Java_Uebung_gemixt/Aufgabe9.java)
-:white_check_mark: [Aufgabe 10](https://github.com/deanomus/SZUT/blob/master/src/de/deanomus/A12_Java_Uebung_gemixt/Aufgabe10.java)
-:x: Aufgabe 11
-:x: Aufgabe 12
+:white_check_mark: [Aufgabe 10](https://github.com/deanomus/SZUT/blob/master/src/de/deanomus/A12_Java_Uebung_gemixt/Aufgabe10.java) | | **Zusatzaufgaben**
+:x: Aufgabe 11 | | :white_check_mark: [GameOfLife](https://github.com/deanomus/SZUT/tree/master/src/de/deanomus/GUI/gameoflife)
+:x: Aufgabe 12 | | :white_check_mark: [BuschFeuer](https://github.com/deanomus/SZUT/tree/master/src/de/deanomus/GUI/buschfeuer)
    
