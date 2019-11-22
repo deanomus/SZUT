@@ -37,7 +37,6 @@ public class Check {
                 button.setVisible(true);
             } else if(activePanels.contains(ChoosePanel.showgameoflife)) {
                 button.setVisible(true);
-                button.setBackground(Color.BLACK);
             }
         }
     }
