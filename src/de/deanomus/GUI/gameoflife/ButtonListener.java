@@ -3,6 +3,7 @@ package de.deanomus.GUI.gameoflife;
 import de.deanomus.GUI.GUI;
 
 import javax.swing.*;
+import javax.swing.border.LineBorder;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -24,6 +25,8 @@ public class ButtonListener implements ActionListener {
                         GameOfLife.active[row][col] = true;
                     }
                     Utils.checkAllForActive();
+                    LineBorder border = new LineBorder(Color.WHITE);
+                    GameOfLife.button[row][col].setBorder(border);
                     return;
                 }
 
