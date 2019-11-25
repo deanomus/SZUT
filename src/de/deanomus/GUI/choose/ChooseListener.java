@@ -2,6 +2,7 @@ package de.deanomus.GUI.choose;
 
 import de.deanomus.GUI.GUI;
 import de.deanomus.GUI.buschfeuer.FeuerPanel;
+import de.deanomus.GUI.converter.ConverterPanel;
 import de.deanomus.GUI.gameoflife.GameOfLife;
 import de.deanomus.GUI.gameoflife.vorlagen.VorlagenPanel;
 import de.deanomus.GUI.options.OptionsPanel;
@@ -49,6 +50,15 @@ public class ChooseListener implements ActionListener {
                 FeuerPanel.start();
                 GUI.tabpane.add(FeuerPanel.firePanel, "Buschfeuer");
                 Check.add(ChoosePanel.buschfeuer);
+            }
+        } else if(actionEvent.getSource().equals(ChoosePanel.converterB)) {
+            if(Check.activePanels.contains(ChoosePanel.converterB)) {
+                GUI.tabpane.remove(ConverterPanel.converterPanel);
+                Check.remove(ChoosePanel.converterB);
+            } else {
+                ConverterPanel.start();
+                GUI.tabpane.add(ConverterPanel.converterPanel, "Converter");
+                Check.add(ChoosePanel.converterB);
             }
         }
         Check.all();

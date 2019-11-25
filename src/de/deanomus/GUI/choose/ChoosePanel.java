@@ -9,7 +9,7 @@ public class ChoosePanel {
     public static JPanel choosePanel;
 
     public static JButton
-            showgameoflife, settings, vorlagen, buschfeuer;
+            showgameoflife, settings, vorlagen, buschfeuer, converterB;
 
 
     public static void start() {
@@ -20,6 +20,7 @@ public class ChoosePanel {
         settings = new JButton("Settings");
         vorlagen = new JButton("Vorlagen");
         buschfeuer = new JButton("Buschfeuer");
+        converterB = new JButton("Converter");
 
         ChooseListener listener = new ChooseListener();
 
@@ -27,16 +28,19 @@ public class ChoosePanel {
         settings.addActionListener(listener);
         vorlagen.addActionListener(listener);
         buschfeuer.addActionListener(listener);
+        converterB.addActionListener(listener);
 
         Check.remove(showgameoflife);
         Check.remove(settings);
         Check.remove(vorlagen);
         Check.remove(buschfeuer);
+        Check.remove(converterB);
 
         choosePanel.add(showgameoflife);
         choosePanel.add(settings);
         choosePanel.add(vorlagen);
         choosePanel.add(buschfeuer);
+        choosePanel.add(converterB);
 
         Check.all();
 
