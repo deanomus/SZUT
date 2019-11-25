@@ -5,6 +5,7 @@ import de.deanomus.GUI.GUI;
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.security.NoSuchAlgorithmException;
 
 public class ConverterListener implements ActionListener {
 
@@ -13,11 +14,21 @@ public class ConverterListener implements ActionListener {
         if(ae.getSource().equals(ConverterPanel.MD5GO)) {
             String input = ConverterPanel.MD5Key.getText();
             if(input.length() != 0) {
-
+                finished(Converter.MD5toString(input));
             } else {
                 noInput();
             }
         }
+    }
+
+    static void finished(String string) {
+        JDialog ergebnis = new JDialog();
+        ergebnis.setTitle("Finished");
+        ergebnis.setSize(300, 100);
+        ergebnis.setResizable(false);
+        ergebnis.add(new JLabel("Fertig! " + string));
+        ergebnis.setModal(true);
+        ergebnis.setVisible(true);
     }
 
     static void noInput() {
