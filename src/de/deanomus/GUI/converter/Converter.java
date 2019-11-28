@@ -6,6 +6,8 @@ import java.util.Base64;
 
 public class Converter {
 
+    static char itsTest = 'A';
+
     public static String StringToMD5(String source) throws NoSuchAlgorithmException {
 
         MessageDigest md = MessageDigest.getInstance("MD5");

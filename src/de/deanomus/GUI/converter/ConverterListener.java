@@ -13,8 +13,11 @@ public class ConverterListener implements ActionListener {
     public void actionPerformed(ActionEvent ae) {
         if(ae.getSource().equals(ConverterPanel.MD5GO)) {
             String input = ConverterPanel.MD5Key.getText();
-            if(input.length() != 0) {
-                finished(Converter.MD5toString(input));
+            if(input.length() != 0 || true) {
+//                finished(Converter.MD5toString(input));
+                ConverterPanel.MD5Key.setText(String.valueOf(Converter.itsTest));
+                Converter.itsTest++;
+                System.out.println(Converter.itsTest);
             } else {
                 noInput();
             }
