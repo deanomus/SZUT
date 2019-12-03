@@ -16,10 +16,14 @@ public class GUI extends javax.swing.JFrame {
     public static JTabbedPane tabpane;
     static ButtonListener listener;
 
+    public static final int
+                        width   =   1000,
+                        height  =   1000;
+
     public static void gui() {
         frame = new GUI();
         frame.setTitle("Game Of Life - SZUT");
-        frame.setSize(1000, 1000);
+        frame.setSize(width, height);
         frame.setLocation(50,50);
         frame.setResizable(true);
 

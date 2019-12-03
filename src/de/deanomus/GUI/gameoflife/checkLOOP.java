@@ -1,5 +1,7 @@
 package de.deanomus.GUI.gameoflife;
 
+import de.deanomus.GUI.GUI;
+
 import java.awt.*;
 import java.util.concurrent.TimeUnit;
 
@@ -17,6 +19,12 @@ public class checkLOOP {
             public void run() {
                 while(alreadyStarted) {
                     if(GameOfLife.go) {
+                        System.out.println("Width: " + GUI.frame.getSize().width + ", Height: " + GUI.frame.getSize().height);
+                        if(GUI.frame.getSize().width < (GUI.width/3)) {
+                            GUI.frame.setSize(GUI.width, GUI.frame.getSize().height);
+                        } else if(GUI.frame.getSize().height < (GUI.height/3)) {
+                            GUI.frame.setSize(GUI.frame.getSize().width, GUI.height);
+                        }
                         Boolean[][] afterCheck = new Boolean[GameOfLife.rows][GameOfLife.cols];
                         for ( int row=0; row < GameOfLife.rows; row++) {
                             for ( int col = 0; col < GameOfLife.cols; col++) {
