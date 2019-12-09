@@ -69,7 +69,8 @@ public class Core {
         } else if (kate == 4) {
             System.out.println(
                     "1 = Durchschnitt Integer\n" +
-                    "2 = GameOfLife"
+                    "2 = GameOfLife\n" +
+                    "3 = Fussball-Manager"
             );
         } else System.out.println("Oops, Fehler! Keine Aufgaben fuer diese Kategorie gefunden :/");
 
@@ -104,6 +105,7 @@ public class Core {
         // Kategorie 4 (Trash-Mash) -> Sachen
         if(kate == 4 && aufg == 1) de.deanomus.trash.DurchschnittInteger.aufg();
         if(kate == 4 && aufg == 2) de.deanomus.GUI.GUI.gui();
+        if(kate == 4 && aufg == 3) de.deanomus.OGG.fussball1.Programm.start();
         // -> Exit
         if(kate == 0 && aufg == 0) return;
 
