@@ -2,9 +2,9 @@ package de.deanomus.OGG.fussball2;
 
 public class Player {
 
-    private String
+    protected String
                 name;
-    private int
+    protected int
                 age, experience, motivation,
                 score;
 
