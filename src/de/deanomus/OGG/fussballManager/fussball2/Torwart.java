@@ -1,4 +1,4 @@
-package de.deanomus.OGG.fussball3;
+package de.deanomus.OGG.fussballManager.fussball2;
 
 public class Torwart extends Player {
 

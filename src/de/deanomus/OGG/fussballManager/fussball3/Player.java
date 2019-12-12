@@ -1,4 +1,4 @@
-package de.deanomus.OGG.fussball3;
+package de.deanomus.OGG.fussballManager.fussball3;
 
 public class Player extends Person {
 
