@@ -1,15 +1,12 @@
 package de.deanomus.OGG.fussball3;
 
-public class Trainer {
+public class Trainer extends Person {
 
-    private String
-                name;
     private int
-                age, experience;
+                experience;
 
     public Trainer(String name, int age, int experience) {
-        this.name = name;
-        this.age = age;
+        super(name, age);
         this.experience = experience;
     }
 

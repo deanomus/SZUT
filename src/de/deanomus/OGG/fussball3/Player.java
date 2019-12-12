@@ -1,16 +1,13 @@
 package de.deanomus.OGG.fussball3;
 
-public class Player {
+public class Player extends Person {
 
-    protected String
-                name;
     protected int
-                age, experience, motivation,
+                experience, motivation,
                 score;
 
     public Player(String name, int age, int experience, int motivation, int score) {
-        this.name = name;
-        this.age = age;
+        super(name, age);
         this.experience = experience;
         this.motivation = motivation;
         this.score = score;
@@ -22,7 +19,7 @@ public class Player {
                 "Name: " + this.name +
                 ", Age: " + this.age +
                 ", Experience: " + this.experience +
-                ", Motivation" + this.motivation +
+                ", Motivation: " + this.motivation +
                 ", Score: " + this.score;
     }
 }
