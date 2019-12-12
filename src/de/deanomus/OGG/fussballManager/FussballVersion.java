@@ -1,4 +1,4 @@
-package de.deanomus.OGG;
+package de.deanomus.OGG.fussballManager;
 
 import de.deanomus.core.Core;
 import de.deanomus.util.Data;
@@ -14,11 +14,11 @@ public class FussballVersion {
 
         int v = Data.intScan(scan);
         if(v == 1) {
-            de.deanomus.OGG.fussball1.Programm.start();
+            de.deanomus.OGG.fussballManager.fussball1.Programm.start();
         } else if(v == 2) {
-            de.deanomus.OGG.fussball2.Programm.start();
+            de.deanomus.OGG.fussballManager.fussball2.Programm.start();
         } else if(v == 3) {
-            de.deanomus.OGG.fussball3.Programm.start();
+            de.deanomus.OGG.fussballManager.fussball3.Programm.start();
         }
     }
 

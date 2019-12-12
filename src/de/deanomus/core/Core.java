@@ -1,5 +1,6 @@
 package de.deanomus.core;
 
+import de.deanomus.OGG.fussballManager.FussballVersion;
 import de.deanomus.util.Data;
 
 import java.util.Scanner;
@@ -105,7 +106,7 @@ public class Core {
         // Kategorie 4 (Trash-Mash) -> Sachen
         if(kate == 4 && aufg == 1) de.deanomus.trash.DurchschnittInteger.aufg();
         if(kate == 4 && aufg == 2) de.deanomus.GUI.GUI.gui();
-        if(kate == 4 && aufg == 3) de.deanomus.OGG.FussballVersion.start();
+        if(kate == 4 && aufg == 3) FussballVersion.start();
         // -> Exit
         if(kate == 0 && aufg == 0) return;
 

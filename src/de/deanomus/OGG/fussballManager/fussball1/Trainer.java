@@ -1,4 +1,4 @@
-package de.deanomus.OGG.fussball2;
+package de.deanomus.OGG.fussballManager.fussball1;
 
 public class Trainer {
 
