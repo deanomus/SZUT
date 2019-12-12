@@ -15,7 +15,7 @@ public class Torwart extends Player {
                 "Name: " + this.name +
                         ", Age: " + this.age +
                         ", Experience: " + this.experience +
-                        ", Motivation" + this.motivation +
+                        ", Motivation: " + this.motivation +
                         ", Score: " + this.score +
                         ", Skill: " + this.skill;
     }
