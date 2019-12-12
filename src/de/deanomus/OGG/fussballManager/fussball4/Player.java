@@ -22,4 +22,12 @@ public class Player extends Person {
                 ", Motivation: " + this.motivation +
                 ", Score: " + this.score;
     }
+
+    public int getExperience() { //Staerke
+        return experience;
+    }
+
+    public int getMotivation() {
+        return motivation;
+    }
 }
