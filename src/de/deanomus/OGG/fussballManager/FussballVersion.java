@@ -10,15 +10,23 @@ public class FussballVersion {
     static Scanner scan = Core.scan;
 
     public static void start() {
-        System.out.println("Which version to start? (v1, v2, v3)");
+        int v = 12345678;
+        while(true) {
+            System.out.println("\nWhich version to start? (v1, v2, v3, v4)");
+            if(v != 12345678) System.out.println("Exit with: 0");
 
-        int v = Data.intScan(scan);
-        if(v == 1) {
-            de.deanomus.OGG.fussballManager.fussball1.Programm.start();
-        } else if(v == 2) {
-            de.deanomus.OGG.fussballManager.fussball2.Programm.start();
-        } else if(v == 3) {
-            de.deanomus.OGG.fussballManager.fussball3.Programm.start();
+            v = Data.intScan(scan);
+            if(v == 0) return;
+            if (v == 1) {
+                de.deanomus.OGG.fussballManager.fussball1.Programm.start();
+            } else if (v == 2) {
+                de.deanomus.OGG.fussballManager.fussball2.Programm.start();
+            } else if (v == 3) {
+                de.deanomus.OGG.fussballManager.fussball3.Programm.start();
+            } else if (v == 4) {
+                de.deanomus.OGG.fussballManager.fussball4.Programm.start();
+            }
+
         }
     }
 
