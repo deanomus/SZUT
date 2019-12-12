@@ -4,13 +4,17 @@ public class Programm {
 
 
     public static void start() {
-        Trainer t = new Trainer("Uwe", 40, 10);
-        Player p = new Player("Paul", 3, 0, 0, 0);
-        Torwart tw = new Torwart("Bob", 99, 0, 0, 10);
+        Trainer uwe = new Trainer("Busfahrer Uwe", 88, 10);
+        Torwart max = new Torwart("Max Mustermann", 22, 5, 5, 5);
+        Mannschaft ausland = new Mannschaft(uwe, max, "Ausland");
 
-        System.out.println(t);
-        System.out.println(p);
-        System.out.println(tw);
+        Player herbert = new Player("Herbertimus", 50, 1, 1, 0);
+        Player marcel = new Player("Marcel Eris", 28, 10, 10, 88);
+
+        ausland.addPlayer(herbert);
+        ausland.addPlayer(marcel);
+
+        System.out.println(ausland);
     }
 
 
