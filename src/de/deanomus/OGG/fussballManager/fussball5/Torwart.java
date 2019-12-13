@@ -3,20 +3,24 @@ package de.deanomus.OGG.fussballManager.fussball5;
 public class Torwart extends Player {
 
     private int
-                skill;
+            reactionSkill;
 
-    public Torwart(String name, int age, int experience, int motivation, int skill) {
+    public Torwart(String name, int age, int experience, int motivation, int reactionSkill) {
         super(name, age, experience, motivation, 0);
-        this.skill = skill;
+        this.reactionSkill = reactionSkill;
     }
 
     public String toString() {
         return
                 "Name: " + this.name +
                         ", Age: " + this.age +
-                        ", Experience: " + this.experience +
+                        ", Experience: " + this.staerke +
                         ", Motivation: " + this.motivation +
                         ", Score: " + this.score +
-                        ", Skill: " + this.skill;
+                        ", Skill: " + this.reactionSkill;
+    }
+
+    public int getReactionSkill() {
+        return reactionSkill;
     }
 }

@@ -12,23 +12,23 @@ public class Spiel {
     private int[] treffer = new int[2];
     private Mannschaft[] team = new Mannschaft[2];
     public int
-                Heim = 0,
-                Guest = 1;
+                HEIM = 0,
+                GUEST = 1;
 
 
     public Spiel(Mannschaft HeimTeam, Mannschaft GastTeam) {
         History = new StringBuilder();
         History.append("### VERLAUF ###\n");
-        treffer[Heim] = 0;
-        treffer[Guest] = 0;
-        team[Heim] = HeimTeam;
-        team[Guest] = GastTeam;
+        treffer[HEIM] = 0;
+        treffer[GUEST] = 0;
+        team[HEIM] = HeimTeam;
+        team[GUEST] = GastTeam;
     }
 
     public String toString() {
         String s =
-                "Name Team-1: " + team[Heim].getName() + "\n" +
-                "Name Team-2: " + team[Guest].getName();
+                "Name Team-1: " + team[HEIM].getName() + "\n" +
+                "Name Team-2: " + team[GUEST].getName();
 
         return s;
     }
@@ -42,4 +42,7 @@ public class Spiel {
         History.append(this.team[Team].getName() + " hat ein Tor gemacht!\n");
     }
 
+    public Mannschaft getTeam(int Team) {
+        return this.team[Team];
+    }
 }

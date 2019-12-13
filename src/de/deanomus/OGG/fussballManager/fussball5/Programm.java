@@ -28,7 +28,7 @@ public class Programm {
 
         Spiel itsTheGameEAsports = new Spiel(ger, ausland);
 
-        itsTheGameEAsports.addTreffer(itsTheGameEAsports.Heim);
+        itsTheGameEAsports.addTreffer(itsTheGameEAsports.HEIM);
 
         System.out.println(itsTheGameEAsports);
         System.out.println(itsTheGameEAsports.getHistory());
