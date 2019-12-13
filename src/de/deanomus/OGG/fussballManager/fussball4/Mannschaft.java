@@ -11,6 +11,10 @@ public class Mannschaft {
     private Torwart torwart;
 
 
+    public String getName() {
+        return mName;
+    }
+
     public Mannschaft(Trainer trainer, Torwart torwart, String name) {
         this.playerList = new ArrayList<>();
         this.mName = name;
