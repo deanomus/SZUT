@@ -13,4 +13,8 @@ public class Trainer extends Person {
     public String toString() {
         return "Name: " + this.name + ", Age: " + this.age + ", Experience: " + this.experience;
     }
+
+    public int getExperience() {
+        return experience;
+    }
 }

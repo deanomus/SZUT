@@ -39,7 +39,7 @@ public class Mannschaft {
     private int getStarke() {
         int i = 0;
         for(Player p : playerList) {
-            i += p.getExperience();
+            i += p.getStaerke();
         }
         int staerke = i / playerList.size();
         return staerke;
@@ -71,4 +71,11 @@ public class Mannschaft {
         return s;
     }
 
+    public ArrayList<Player> getPlayerList() {
+        return playerList;
+    }
+
+    public Trainer getTrainer() {
+        return trainer;
+    }
 }

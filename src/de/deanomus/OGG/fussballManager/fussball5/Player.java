@@ -3,12 +3,12 @@ package de.deanomus.OGG.fussballManager.fussball5;
 public class Player extends Person {
 
     protected int
-                experience, motivation,
+            staerke, motivation,
                 score;
 
-    public Player(String name, int age, int experience, int motivation, int score) {
+    public Player(String name, int age, int staerke, int motivation, int score) {
         super(name, age);
-        this.experience = experience;
+        this.staerke = staerke;
         this.motivation = motivation;
         this.score = score;
     }
@@ -18,13 +18,13 @@ public class Player extends Person {
         return
                 "Name: " + this.name +
                 ", Age: " + this.age +
-                ", Experience: " + this.experience +
+                ", Staerke: " + this.staerke +
                 ", Motivation: " + this.motivation +
                 ", Score: " + this.score;
     }
 
-    public int getExperience() { //Staerke
-        return experience;
+    public int getStaerke() { //Staerke
+        return staerke;
     }
 
     public int getMotivation() {
