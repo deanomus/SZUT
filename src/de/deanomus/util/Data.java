@@ -1,5 +1,6 @@
 package de.deanomus.util;
 
+import java.util.Random;
 import java.util.Scanner;
 
 public class Data {
@@ -28,6 +29,11 @@ public class Data {
     public static boolean possible2Convert(String number) {
         if(!(text2int(number) == null)) return true;
         return false;
+    }
+
+    public static int rdmInt(int min, int max) {
+        Random r = new Random();
+        return r.nextInt((max - min) + 1) + min;
     }
 
     public static Integer text2int(String number) {

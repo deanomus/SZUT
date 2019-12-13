@@ -71,7 +71,8 @@ public class Core {
             System.out.println(
                     "1 = Durchschnitt Integer\n" +
                     "2 = GameOfLife\n" +
-                    "3 = Fussball-Manager"
+                    "3 = Fussball-Manager\n" +
+                    "4 = RDM-Tester"
             );
         } else System.out.println("Oops, Fehler! Keine Aufgaben fuer diese Kategorie gefunden :/");
 
@@ -107,6 +108,7 @@ public class Core {
         if(kate == 4 && aufg == 1) de.deanomus.trash.DurchschnittInteger.aufg();
         if(kate == 4 && aufg == 2) de.deanomus.GUI.GUI.gui();
         if(kate == 4 && aufg == 3) FussballVersion.start();
+        if(kate == 4 && aufg == 4) de.deanomus.trash.rdmTester.start();
         // -> Exit
         if(kate == 0 && aufg == 0) return;
 
