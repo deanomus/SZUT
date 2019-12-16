@@ -30,6 +30,9 @@ public class Programm {
 
         itsTheGameEAsports.addTreffer(itsTheGameEAsports.HEIM);
 
+
+        Gameplay yes = new Gameplay(itsTheGameEAsports);
+
         System.out.println(itsTheGameEAsports);
         System.out.println(itsTheGameEAsports.getHistory());
     }

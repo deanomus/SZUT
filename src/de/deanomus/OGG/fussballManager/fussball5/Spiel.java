@@ -40,6 +40,7 @@ public class Spiel {
     public void addTreffer(int Team) {
         treffer[Team]++;
         History.append(this.team[Team].getName() + " hat ein Tor gemacht!\n");
+        System.out.println(this.team[Team].getName() + "hat ein Tor gemacht!");
     }
 
     public Mannschaft getTeam(int Team) {
