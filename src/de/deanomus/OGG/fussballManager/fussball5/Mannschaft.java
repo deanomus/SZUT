@@ -1,5 +1,7 @@
 package de.deanomus.OGG.fussballManager.fussball5;
 
+import de.deanomus.util.Data;
+
 import java.util.ArrayList;
 
 public class Mannschaft {
@@ -27,6 +29,10 @@ public class Mannschaft {
         this.playerList.add(p);
     }
 
+    public Torwart getTorwart() {
+        return this.torwart;
+    }
+
     private int getMotivation() {
         int mot = 0;
         for(Player p : this.playerList) {
@@ -34,6 +40,21 @@ public class Mannschaft {
         }
         int motivation = mot / this.playerList.size();
         return motivation;
+    }
+
+    public Player getRdmPlayer() {
+
+        int i = 0;
+        int needed = Data.rdmInt(0, playerList.size() - 1);
+
+        for(Player p : playerList) {
+            if(i == needed) {
+                return p;
+            }
+        }
+
+
+        return null;
     }
 
     private int getStarke() {

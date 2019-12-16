@@ -1,10 +1,13 @@
 package de.deanomus.OGG.fussballManager.fussball5;
 
+import de.deanomus.core.Core;
 import de.deanomus.util.Data;
+
+import java.util.concurrent.TimeUnit;
 
 public class Gameplay {
 
-    private Spiel game;
+    private Boolean alreadyStarted = false;
     private final int
                     SPIELZEIT = 90,
                     MAX_NACHSPIELZEIT = 5,
@@ -30,7 +33,7 @@ public class Gameplay {
         } else return false;
     }
 
-    private int calulateWert(int Team) {
+    private int calulateWert(int Team, Spiel game) { // Mannschafts-Wert
         int i = 0;
 
         for (Player p : game.getTeam(Team).getPlayerList()) {
@@ -44,9 +47,49 @@ public class Gameplay {
         return i;
     }
 
+    private void doSomething(Spiel game, Mannschaft team) {
+        int rdmInt = Data.rdmInt(0, 0);
+        if(rdmInt == 0) {
+            Player p = team.getRdmPlayer();
+            Torwart t;
+            if(team == game.getTeam(game.HEIM)) { t = game.getTeam(game.GUEST).getTorwart(); } else { t = game.getTeam(game.HEIM).getTorwart(); }
+            if(erziehltTor(t, p)) {
+                if(team == game.getTeam(game.HEIM)) { game.addTreffer(game.HEIM); } else { game.addTreffer(game.GUEST); }
+            }
+        }
+    }
 
-    public Gameplay(Spiel spiel) {
-        this.game = spiel;
+    public Gameplay(Spiel game) { spielen(game); }
+
+
+    public void spielen(Spiel game) {
+        if(alreadyStarted) return;
+        alreadyStarted = true;
+
+        System.out.println("!!! LETS GO !!!");
+        final int MAX_GAMETIME = (SPIELZEIT) + Data.rdmInt(0, MAX_NACHSPIELZEIT);
+        int gametime = 0;
+
+        while(gametime <= MAX_GAMETIME) {
+
+            int time = Data.rdmInt(1, MAX_DAUER_NEXT_ACTION);
+            gametime += time;
+
+            int summeWerte = calulateWert(game.HEIM, game) + calulateWert(game.GUEST, game);
+
+            if((calulateWert(game.HEIM, game) + Data.rdmInt(0, summeWerte)) >= (calulateWert(game.GUEST, game) + Data.rdmInt(0, summeWerte))) {
+                doSomething(game, game.getTeam(game.HEIM)); } else { doSomething(game, game.getTeam(game.GUEST)); }
+
+
+
+
+            try {
+                if(!Core.DEBUG) { TimeUnit.SECONDS.sleep(time); } else { TimeUnit.MILLISECONDS.sleep(time); }
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+
+        }
     }
 
 }
