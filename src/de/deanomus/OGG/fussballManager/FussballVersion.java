@@ -12,7 +12,7 @@ public class FussballVersion {
     public static void start() {
         int v = 12345678;
         while(true) {
-            System.out.println("\nWhich version to start? (v1, v2, v3, v4)");
+            System.out.println("\nWhich version to start? (v1, v2, v3, v4, v5)");
             if(v != 12345678) System.out.println("Exit with: 0");
 
             v = Data.intScan(scan);
@@ -25,6 +25,10 @@ public class FussballVersion {
                 de.deanomus.OGG.fussballManager.fussball3.Programm.start();
             } else if (v == 4) {
                 de.deanomus.OGG.fussballManager.fussball4.Programm.start();
+            } else if (v == 5) {
+                de.deanomus.OGG.fussballManager.fussball5.Programm.start();
+            } else {
+                System.out.println("Error, not found");
             }
 
         }
