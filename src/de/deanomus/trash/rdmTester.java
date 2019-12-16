@@ -15,7 +15,7 @@ public class rdmTester {
         int startInt = Data.intScan(scan);
         System.out.print("\nTo int?: ");
         int endInt = Data.intScan(scan);
-        if(startInt > endInt) {
+        if(startInt >= endInt) {
             System.out.println("Fehler, StartInt > endInt");
             return;
         }
