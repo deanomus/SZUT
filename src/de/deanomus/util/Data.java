@@ -1,5 +1,7 @@
 package de.deanomus.util;
 
+import de.deanomus.core.Core;
+
 import java.util.Random;
 import java.util.Scanner;
 
@@ -34,6 +36,10 @@ public class Data {
     public static int rdmInt(int min, int max) {
         Random r = new Random();
         return r.nextInt((max - min) + 1) + min;
+    }
+
+    public static void DEBUG(String Message) {
+        if(Core.DEBUG) System.out.println("DEBUG: " + Message);
     }
 
     public static Integer text2int(String number) {
