@@ -51,6 +51,7 @@ public class Gameplay {
         int rdmInt = Data.rdmInt(0, 0);
         if(rdmInt == 0) {
             Player p = team.getRdmPlayer();
+            Data.DEBUG(p.toString());
             Torwart t;
             if(team == game.getTeam(game.HEIM)) { t = game.getTeam(game.GUEST).getTorwart(); } else { t = game.getTeam(game.HEIM).getTorwart(); }
             if(erziehltTor(t, p)) {
@@ -59,7 +60,6 @@ public class Gameplay {
         }
     }
 
-    public Gameplay(Spiel game) { spielen(game); }
 
 
     public void spielen(Spiel game) {
@@ -90,6 +90,7 @@ public class Gameplay {
             }
 
         }
+        alreadyStarted = false;
     }
 
 }

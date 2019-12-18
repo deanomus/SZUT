@@ -28,10 +28,11 @@ public class Programm {
 
         Spiel itsTheGameEAsports = new Spiel(ger, ausland);
 
-        itsTheGameEAsports.addTreffer(itsTheGameEAsports.HEIM);
 
 
-        Gameplay yes = new Gameplay(itsTheGameEAsports);
+//        Gameplay.spielen(itsTheGameEAsports);
+        Gameplay sm = new Gameplay();
+        sm.spielen(itsTheGameEAsports);
 
         System.out.println(itsTheGameEAsports);
         System.out.println(itsTheGameEAsports.getHistory());

@@ -27,10 +27,16 @@ public class rdmTester {
             int rdmGen = Data.rdmInt(startInt, endInt);
             counter[(rdmGen-startInt)]++;
         }
-
+        String s = "";
+//        StringBuilder sb = new StringBuilder();
         for ( int i=0; i < counter.length; i++) {
-            System.out.print("| " + (i+startInt) + "= x" + counter[i] + " |");
+            if(counter[i] != 0) {
+                System.out.println( i+ ", ");
+                s += "| " + (i + startInt) + "= x" + counter[i] + " |";
+//            sb.append("| " + (i+startInt) + "= x" + counter[i] + " |");
+            }
         }
+        System.out.println(s);
     }
 
 }
