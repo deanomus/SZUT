@@ -2,6 +2,7 @@ package de.deanomus.util;
 
 import de.deanomus.core.Core;
 
+import java.util.HashMap;
 import java.util.Random;
 import java.util.Scanner;
 
@@ -9,6 +10,9 @@ public class Data {
 
     // RUN ALL
     // 1 1 100 1 1 100 100 100 1 5 WelCHES 1 7 44 55 66 77 88 99 10 22 33 55 33 22 654 24 66 44 33 77 88 66 33 22 44 66 77 88 77 876 356 87 5 43 56 5 4 6 754 4 6765 67765 43 0 1 8 1 9 20 20 20 20 1 10 24 24 24 24 1 12 2 0 2 1 2 2 2 3 2 4 2 5 2 6 3 1 3 2 3 3 3 4 3 5
+
+    static int DebugCounter = 1;
+    static HashMap<Integer, String> DebugMessages = new HashMap<Integer, String>();
 
     public static int intScan(Scanner scan) {
         Integer i = null;
@@ -35,11 +39,15 @@ public class Data {
 
     public static int rdmInt(int min, int max) {
         Random r = new Random();
-        return r.nextInt((max - min) + 1) + min;
+        int genInt = r.nextInt((max - min) + 1) + min;
+        DEBUG("Generate random int (" +  + min + "," + max + "): " + genInt);
+        return genInt;
     }
 
     public static void DEBUG(String Message) {
-        if(Core.DEBUG) System.out.println("DEBUG: " + Message);
+        if(Core.DEBUG) System.out.println("DEBUG(" + DebugCounter + "): " + Message);
+        DebugMessages.put(DebugCounter, Message);
+        DebugCounter++;
     }
 
     public static Integer text2int(String number) {

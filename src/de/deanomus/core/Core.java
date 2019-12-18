@@ -9,7 +9,7 @@ public class Core {
 
 
     public static Scanner scan;
-    public static final Boolean DEBUG = false;
+    public static final Boolean DEBUG = true;
 
     public static void main(String[] args) {
 
