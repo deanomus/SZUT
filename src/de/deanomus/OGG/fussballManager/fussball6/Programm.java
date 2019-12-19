@@ -20,17 +20,22 @@ public class Programm {
         //Gast Mannschaft
         Trainer erdogan = new Trainer("Recep Erdogan", 88, 10);
         Torwart emine = new Torwart("Emine Erdogan", 22, 5, 5, 5);
-        Mannschaft ausland = new Mannschaft(erdogan, emine, "Ausland");
+        Mannschaft guest = new Mannschaft(erdogan, emine, "Ausland");
 
         Player mohammed = new Player("Mohammed", 1643, 10, 10, 0);
 
-        ausland.addPlayer(mohammed);
+        guest.addPlayer(mohammed);
 
-        Spiel itsTheGameEAsports = new Spiel(ger, ausland);
+        Spiel itsTheGameEAsports = new Spiel(ger, guest);
 
 
         Gameplay sm = new Gameplay();
-        sm.spielen(itsTheGameEAsports);
+        try {
+            sm.spielen(itsTheGameEAsports);
+        } catch (SpielCancelException e) {
+//            e.printStackTrace();
+            System.out.println(e.getMessage());
+        }
 
 //        System.out.println(itsTheGameEAsports);
 //        System.out.println(itsTheGameEAsports.getHistory());
