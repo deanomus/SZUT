@@ -45,10 +45,45 @@ public class Data {
     }
 
     public static void DEBUG(String Message) {
-        if(Core.DEBUG) System.out.println("DEBUG(" + DebugCounter + "): " + Message);
-        DebugMessages.put(DebugCounter, Message);
-        DebugCounter++;
+        final Boolean
+                save = true,
+                forceDebug = false;
+        DEBUGTHIS(Message, save, forceDebug);
     }
+
+    public static void DEBUG(String Message, Boolean save) {
+        final Boolean forceDebug = false;
+        DEBUGTHIS(Message, save, forceDebug);
+    }
+
+    public static void DEBUG(String Message, Boolean save, Boolean forceDebug) {
+        DEBUGTHIS(Message, save, forceDebug);
+    }
+
+
+    private static void DEBUGTHIS(String Message, Boolean save, Boolean forceDebug) {
+
+        int saveID = 0;
+        if(save) {
+            saveID = DebugCounter;
+            DebugMessages.put(saveID, Message);
+            DebugCounter++;
+        }
+
+        if(Core.DEBUG || forceDebug) {
+            System.out.println("DEBUG(" + saveID + "): " + Message);
+        }
+
+
+        final int STORE = 100;
+        if(DebugCounter - STORE >= 1) {
+            if(DebugMessages.get(DebugCounter - STORE) != null) {
+                DebugMessages.put(DebugCounter - STORE, null);
+                DEBUG("Entry " + (DebugCounter-STORE) + " deleted", false);
+            }
+        }
+    }
+
 
     public static Integer text2int(String number) {
         //Deutsch / German

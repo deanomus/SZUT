@@ -19,7 +19,7 @@ public class checkLOOP {
             public void run() {
                 while(alreadyStarted) {
                     if(GameOfLife.go) {
-                        System.out.println("Width: " + GUI.frame.getSize().width + ", Height: " + GUI.frame.getSize().height);
+//                        System.out.println("Width: " + GUI.frame.getSize().width + ", Height: " + GUI.frame.getSize().height);
                         if(GUI.frame.getSize().width < (GUI.width/3)) {
                             GUI.frame.setSize(GUI.width, GUI.frame.getSize().height);
                         } else if(GUI.frame.getSize().height < (GUI.height/3)) {
