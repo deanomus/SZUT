@@ -62,7 +62,7 @@ public class Gameplay {
 
 
 
-    public void spielen(Spiel game) {
+    public void spielen(Spiel game) throws SpielCancelException {
         if(alreadyStarted) return;
         alreadyStarted = true;
 
@@ -74,6 +74,10 @@ public class Gameplay {
 
             int time = Data.rdmInt(1, MAX_DAUER_NEXT_ACTION);
             gametime += time;
+            if(cancelGame()) {
+                throw new SpielCancelException(gametime);
+            }
+
 
             int summeWerte = calulateWert(game.HEIM, game) + calulateWert(game.GUEST, game);
 
@@ -91,6 +95,12 @@ public class Gameplay {
 
         }
         alreadyStarted = false;
+    }
+
+
+    private Boolean cancelGame() {
+        if(Data.rdmInt(0, 999) == 0) return true;
+        return false;
     }
 
 }
