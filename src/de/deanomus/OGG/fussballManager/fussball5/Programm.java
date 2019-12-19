@@ -9,17 +9,17 @@ public class Programm {
         Torwart max = new Torwart("Max Mustermann", 22, 5, 5, 5);
         Mannschaft ger = new Mannschaft(uwe, max, "Deutsche Land");
 
-        Player herbert = new Player("Herbertimus", 50, 1, 1, 0);
+        Player herbert = new Player("Herbertimus", 50, 10, 10, 0);
         Player marcel = new Player("Marcel Eris", 28, 10, 10, 88);
-        Player Arnold = new Player("Arnold Schwarzenegger", 72, 2, 2, 0);
+        Player Arnold = new Player("Arnold Schwarzenegger", 72, 10, 10, 0);
 
         ger.addPlayer(herbert);
         ger.addPlayer(marcel);
         ger.addPlayer(Arnold);
 
         //Gast Mannschaft
-        Trainer erdogan = new Trainer("Recep Erdogan", 65, 0);
-        Torwart emine = new Torwart("Emine Erdogan", 64, 0, 0, 0);
+        Trainer erdogan = new Trainer("Recep Erdogan", 88, 10);
+        Torwart emine = new Torwart("Emine Erdogan", 22, 5, 5, 5);
         Mannschaft ausland = new Mannschaft(erdogan, emine, "Ausland");
 
         Player mohammed = new Player("Mohammed", 1643, 10, 10, 0);
@@ -29,13 +29,11 @@ public class Programm {
         Spiel itsTheGameEAsports = new Spiel(ger, ausland);
 
 
-
-//        Gameplay.spielen(itsTheGameEAsports);
         Gameplay sm = new Gameplay();
         sm.spielen(itsTheGameEAsports);
 
-        System.out.println(itsTheGameEAsports);
-        System.out.println(itsTheGameEAsports.getHistory());
+//        System.out.println(itsTheGameEAsports);
+//        System.out.println(itsTheGameEAsports.getHistory());
     }
 
 
