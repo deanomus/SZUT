@@ -51,6 +51,7 @@ public class Mannschaft {
             if(i == needed) {
                 return p;
             }
+            i++;
         }
 
 
