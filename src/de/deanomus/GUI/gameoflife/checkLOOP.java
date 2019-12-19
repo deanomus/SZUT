@@ -13,8 +13,6 @@ public class checkLOOP {
         if(alreadyStarted) return;
         alreadyStarted = true;
 
-
-
         Thread t1 = new Thread(new Runnable() {
             public void run() {
                 while(alreadyStarted) {
@@ -37,53 +35,29 @@ public class checkLOOP {
 
                                 int aNachb = 0;
 
-                                if(col>0) {
-                                    // Linker Nachbar
-//                                    afterCheck[row][col-1] = true;
-                                    if(GameOfLife.active[row][col-1]) aNachb++;
-                                }
+                                // Linker Nachbar
+                                if(col>0) { if(GameOfLife.active[row][col-1]) aNachb++; }
 
-                                if(col>0 && row>0) {
-                                    //oberer Linker Nachbar
-//                                    afterCheck[row-1][col-1] = true;
-                                    if(GameOfLife.active[row-1][col-1]) aNachb++;
-                                }
+                                //oberer Linker Nachbar
+                                if(col>0 && row>0) { if(GameOfLife.active[row-1][col-1]) aNachb++; }
 
-                                if(row>0) {
-                                    //oben
-//                                    afterCheck[row-1][col] = true;
-                                    if(GameOfLife.active[row-1][col]) aNachb++;
-                                }
+                                //oben
+                                if(row>0) { if(GameOfLife.active[row-1][col]) aNachb++; }
 
-                                if(row>0 && col<GameOfLife.cols-1) {
-                                    //oberer Rechter Nachbar
-//                                    afterCheck[row-1][col+1] = true;
-                                    if(GameOfLife.active[row-1][col+1]) aNachb++;
-                                }
+                                //oberer Rechter Nachbar
+                                if(row>0 && col<GameOfLife.cols-1) { if(GameOfLife.active[row-1][col+1]) aNachb++; }
 
-                                if(col<GameOfLife.cols-1) {
-                                    //rechter Nachbar
-//                                    afterCheck[row][col+1] = true;
-                                    if(GameOfLife.active[row][col+1]) aNachb++;
-                                }
+                                //rechter Nachbar
+                                if(col<GameOfLife.cols-1) { if(GameOfLife.active[row][col+1]) aNachb++; }
 
-                                if(row<GameOfLife.cols-1 && col<GameOfLife.cols-1) {
-                                    //unterer rechter Nachbar
-//                                    afterCheck[row+1][col+1] = true;
-                                    if(GameOfLife.active[row+1][col+1]) aNachb++;
-                                }
+                                //unterer rechter Nachbar
+                                if(row<GameOfLife.cols-1 && col<GameOfLife.cols-1) { if(GameOfLife.active[row+1][col+1]) aNachb++; }
 
-                                if(row<GameOfLife.rows-1) {
-                                    //unterer Nachbar
-//                                    afterCheck[row+1][col] = true;
-                                    if(GameOfLife.active[row+1][col]) aNachb++;
-                                }
+                                //unterer Nachbar
+                                if(row<GameOfLife.rows-1) { if(GameOfLife.active[row+1][col]) aNachb++; }
 
-                                if(row<GameOfLife.rows-1 && col>0) {
-                                    //unterer Linker Nachbar
-//                                    afterCheck[row+1][col-1] = true;
-                                    if(GameOfLife.active[row+1][col-1]) aNachb++;
-                                }
+                                //unterer Linker Nachbar
+                                if(row<GameOfLife.rows-1 && col>0) { if(GameOfLife.active[row+1][col-1]) aNachb++; }
 
 
                                 if(GameOfLife.active[row][col]) {
@@ -96,28 +70,8 @@ public class checkLOOP {
                                     }
                                 }
 
-
-
-//                                if(GameOfLife.active[row][col]) {
-//                                    if(col != 0) {
-//                                        if(!GameOfLife.active[row][col-1]) afterCheck[row][col] = false;
-//                                    } else afterCheck[row][col] = false;
-//                                    if(col < (GameOfLife.cols-1)) {
-//                                        afterCheck[row][col+1] = true;
-//                                    } else {
-//                                        afterCheck[row][0] = true;
-//                                    }
-//                                }
-
                             }
                         }
-
-
-
-
-
-
-
 
 
                         for ( int row=0; row < GameOfLife.rows; row++) {
