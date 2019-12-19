@@ -31,7 +31,6 @@ public class rdmTester {
 //        StringBuilder sb = new StringBuilder();
         for ( int i=0; i < counter.length; i++) {
             if(counter[i] != 0) {
-                System.out.println( i+ ", ");
                 s += "| " + (i + startInt) + "= x" + counter[i] + " |";
 //            sb.append("| " + (i+startInt) + "= x" + counter[i] + " |");
             }
