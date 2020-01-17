@@ -13,6 +13,7 @@ public class Data {
 
     static int DebugCounter = 1;
     static HashMap<Integer, String> DebugMessages = new HashMap<Integer, String>();
+    static Scanner scan = Core.scan;
 
     public static int intScan(Scanner scan) {
         Integer i = null;
@@ -84,6 +85,17 @@ public class Data {
         }
     }
 
+    public static Boolean confirm() {
+        String s = scan.next();
+        while(true) {
+            System.out.println("Please confirm (yes/no): ");
+            if (s.equals("y") || s.equals("yes")) {
+                return true;
+            } else if(s.equals("n") || s.equals("no")) {
+                return false;
+            }
+        }
+    }
 
     public static Integer text2int(String number) {
         //Deutsch / German
