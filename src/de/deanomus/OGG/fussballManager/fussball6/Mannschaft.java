@@ -54,8 +54,12 @@ public class Mannschaft {
             i++;
         }
 
+        System.out.println("Error while get an random player");
+        while(!Data.confirm()) {
+            System.out.println("Please confirm");
+        }
+        return getRdmPlayer();
 
-        return null;
     }
 
     private int getStarke() {
