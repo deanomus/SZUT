@@ -1,4 +1,4 @@
-package de.deanomus.OGG.fussballManager.fussball6_2;
+package de.deanomus.OGG.fussballManager.fussballGUI;
 
 import de.deanomus.util.Data;
 
