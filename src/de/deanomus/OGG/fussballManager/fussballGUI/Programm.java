@@ -1,9 +1,15 @@
 package de.deanomus.OGG.fussballManager.fussballGUI;
 
+import de.deanomus.OGG.fussballManager.fussballGUI.GUI.gui;
+
 public class Programm {
 
-
     public static void start() {
+        gui GUI = new gui();
+        GUI.startGame();
+    }
+
+    public static void oldstart() {
         //Heim-Team
         Trainer uwe = new Trainer("Busfahrer Uwe", 88, 10);
         Torwart max = new Torwart("Max Mustermann", 22, 5, 5, 5);
