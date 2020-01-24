@@ -1,9 +1,6 @@
 package de.deanomus.OGG.fussballManager.fussballGUI.GUI;
 
-import javax.swing.*;
-import java.awt.*;
-
-public class gui extends JFrame {
+public class gui extends Utils {
 
     // --- Options \/
     private int
@@ -17,16 +14,14 @@ public class gui extends JFrame {
 
 
     public gui() {
+        init();
         this.setTitle(this.guiTitle);
         this.setSize(this.width, this.height);
         this.setLocation(50, 50);
         this.setResizable(this.guiResizable);
-        this.setVisible(true);
+        this.setup();
     }
 
-    private void showOptions() {
-
-    }
 
     public void startGame() {
 
