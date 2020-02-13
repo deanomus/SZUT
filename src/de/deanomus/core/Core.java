@@ -28,7 +28,7 @@ public class Core {
                         "1 = 12_Java_Uebung_gemixt\n" +
                         "2 = 15.1_ArbeitsauftragArrays\n" +
                         "3 = 20.1_Mehrdimensionale_Arrays\n" +
-                        "4 = Trash-Mash"
+                        "4 = Other (OOP, Trash-Mash)"
         );
 
         int kate = Data.intScan(scan);
@@ -73,7 +73,8 @@ public class Core {
                     "1 = Durchschnitt Integer\n" +
                     "2 = GameOfLife\n" +
                     "3 = Fussball-Manager\n" +
-                    "4 = RDM-Tester"
+                    "4 = RDM-Tester\n" +
+                    "5 = Zuul"
             );
         } else System.out.println("Oops, Fehler! Keine Aufgaben fuer diese Kategorie gefunden :/");
 
@@ -110,6 +111,7 @@ public class Core {
         if(kate == 4 && aufg == 2) de.deanomus.GUI.GUI.gui();
         if(kate == 4 && aufg == 3) FussballVersion.start();
         if(kate == 4 && aufg == 4) de.deanomus.trash.rdmTester.start();
+        if(kate == 4 && aufg == 5) de.deanomus.OGG.zuul.Programm.main();
         // -> Exit
         if(kate == 0 && aufg == 0) return;
 
