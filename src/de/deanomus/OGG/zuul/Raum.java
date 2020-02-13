@@ -15,10 +15,13 @@ package de.deanomus.OGG.zuul;
 public class Raum 
 {
     public String beschreibung;
-    public Raum nordausgang;
-    public Raum suedausgang;
-    public Raum ostausgang;
-    public Raum westausgang;
+    public Raum
+            nordausgang,
+            suedausgang,
+            ostausgang,
+            westausgang,
+            UpAusgang,
+            DownAusgang;
 
     /**
      * Erzeuge einen Raum mit einer Beschreibung. Ein Raum
@@ -43,16 +46,31 @@ public class Raum
     public void setzeAusgaenge(Raum norden, Raum osten,
                                Raum sueden, Raum westen) 
     {
-        if(norden != null)
-            nordausgang = norden;
-        if(osten != null)
-            ostausgang = osten;
-        if(sueden != null)
-            suedausgang = sueden;
-        if(westen != null)
-            westausgang = westen;
+        setzeAusgaenge(norden, osten, sueden, westen, null, null);
     }
 
+    /**
+     * Definiere die Ausgänge dieses Raums. Jede Richtung
+     * führt entweder in einen anderen Raum oder ist 'null'
+     * (kein Ausgang).
+     * @param norden Der Nordeingang.
+     * @param osten Der Osteingang.
+     * @param sueden Der Südeingang.
+     * @param westen Der Westeingang.
+     * @param StairUP Treppe nach Oben
+     * @param StairDOWN Treppe nach Unten
+     */
+    public void setzeAusgaenge(Raum norden, Raum osten,
+                               Raum sueden, Raum westen,
+                               Raum StairUP,Raum StairDOWN)
+    {
+        if(norden   != null) nordausgang    = norden;
+        if(osten    != null) ostausgang     = osten;
+        if(sueden   != null) suedausgang    = sueden;
+        if(westen   != null) westausgang    = westen;
+        if(StairUP  != null) UpAusgang      = StairUP;
+        if(StairDOWN!= null) DownAusgang    = StairDOWN;
+    }
     /**
      * @return Die Beschreibung dieses Raums.
      */

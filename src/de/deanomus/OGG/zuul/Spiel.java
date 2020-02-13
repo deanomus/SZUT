@@ -37,7 +37,10 @@ public class Spiel
      */
     private void raeumeAnlegen()
     {
-        Raum lichtung, waldstueck, taverne, hexenhaus, dorfplatz;
+        Raum
+                lichtung,   waldstueck,     taverne,
+                hexenhaus,  dorfplatz,      GaesteZimmer,
+                keller,     piratenhoehle,  geheimgang;
       
         // die R�ume erzeugen
         lichtung = new Raum("auf einer Lichtung, umgeben von dunklen Tannen");
@@ -45,6 +48,12 @@ public class Spiel
         taverne = new Raum("in der Taverne, mit zwielichtigen Gestalten an der Theke");
         hexenhaus = new Raum("im Hexenhaus");
         dorfplatz = new Raum("auf dem Dorfplatz");
+        GaesteZimmer = new Raum("Gästezimmer des Todes");
+        keller = new Raum("Keller, der Boden ist Lava");
+        piratenhoehle = new Raum("Piratenhöhle, Try to survice, good luck");
+        geheimgang = new Raum("Geheimgang mit tödlichen Fallen");
+
+
         
         // die Ausg�nge initialisieren
         lichtung.setzeAusgaenge(null, null, null, waldstueck);
