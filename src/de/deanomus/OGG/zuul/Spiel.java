@@ -40,7 +40,8 @@ public class Spiel
         Raum
                 lichtung,   waldstueck,     taverne,
                 hexenhaus,  dorfplatz,      GaesteZimmer,
-                keller,     piratenhoehle,  geheimgang;
+                keller,     piratenhoehle,  geheimgang,
+                window;
       
         // die R�ume erzeugen
         lichtung = new Raum("auf einer Lichtung, umgeben von dunklen Tannen");
@@ -58,7 +59,7 @@ public class Spiel
         // die Ausg�nge initialisieren
         lichtung.setzeAusgaenge(null, null, null, waldstueck, null, piratenhoehle);
         waldstueck.setzeAusgaenge(null, lichtung, dorfplatz, null);
-        taverne.setzeAusgaenge(null, dorfplatz, null, null, taverne, null);
+        taverne.setzeAusgaenge(null, dorfplatz, null, null, taverne, null, dorfplatz);
         hexenhaus.setzeAusgaenge(null, dorfplatz, null, null);
         dorfplatz.setzeAusgaenge(waldstueck, null, taverne, hexenhaus);
         GaesteZimmer.setzeAusgaenge(null, null, null, null, null, taverne);
