@@ -26,7 +26,7 @@ public class Spiel
     /**
      * Erzeuge ein Spiel und initialisiere die interne Raumkarte.
      */
-    public Spiel() 
+    public Spiel()
     {
         raeumeAnlegen();
         parser = new Parser();
@@ -97,17 +97,7 @@ public class Spiel
         System.out.println("Entdecke die Welt von Zuul. Doch Vorsicht, �berall lauern Gefahren!");
         System.out.println("Tippen sie 'help', wenn Sie Hilfe brauchen.");
         System.out.println();
-        System.out.println("Sie sind " + aktuellerRaum.gibBeschreibung());
-        System.out.print("Ausg�nge: ");
-        if(aktuellerRaum.nordausgang != null)
-            System.out.print("north ");
-        if(aktuellerRaum.ostausgang != null)
-            System.out.print("east ");
-        if(aktuellerRaum.suedausgang != null)
-            System.out.print("south ");
-        if(aktuellerRaum.westausgang != null)
-            System.out.print("west ");
-        System.out.println();
+        System.out.println(aktuellerRaum.ausgaengeToString());
     }
 
     /**
@@ -167,39 +157,14 @@ public class Spiel
         String richtung = befehl.gibZweitesWort();
 
         // Wir versuchen den Raum zu verlassen.
-        Raum naechsterRaum = null;
-        if(richtung.equals("north")) {
-            naechsterRaum = aktuellerRaum.nordausgang;
-        }
-        if(richtung.equals("east")) {
-            naechsterRaum = aktuellerRaum.ostausgang;
-        }
-        if(richtung.equals("south")) {
-            naechsterRaum = aktuellerRaum.suedausgang;
-        }
-        if(richtung.equals("west")) {
-            naechsterRaum = aktuellerRaum.westausgang;
-        }
-        if(richtung.equals("up")) {
-            naechsterRaum = aktuellerRaum.UpAusgang;
-        }
-        if(richtung.equals("down")) {
-            naechsterRaum = aktuellerRaum.DownAusgang;
-        }
+        Raum naechsterRaum = aktuellerRaum.getAusgang(richtung);
 
         if (naechsterRaum == null) {
             System.out.println("Dort ist keine T�r!");
         }
         else {
             aktuellerRaum = naechsterRaum;
-            System.out.println("Sie sind " + aktuellerRaum.gibBeschreibung());
-            System.out.print("Ausg�nge: ");
-            if (aktuellerRaum.nordausgang   != null) System.out.print("north ");
-            if (aktuellerRaum.ostausgang    != null) System.out.print("east ");
-            if (aktuellerRaum.suedausgang   != null) System.out.print("south ");
-            if (aktuellerRaum.westausgang   != null) System.out.print("west ");
-            if (aktuellerRaum.UpAusgang     != null) System.out.println("up ");
-            if (aktuellerRaum.DownAusgang   != null) System.out.print("down ");
+            System.out.println(aktuellerRaum.ausgaengeToString());
         }
     }
 

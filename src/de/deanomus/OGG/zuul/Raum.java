@@ -14,8 +14,8 @@ package de.deanomus.OGG.zuul;
 
 public class Raum 
 {
-    public String beschreibung;
-    public Raum
+    private String beschreibung;
+    private Raum
             nordausgang,
             suedausgang,
             ostausgang,
@@ -29,7 +29,7 @@ public class Raum
      * @param beschreibung enthält eine Beschreibung in der Form
      *        "in einer Küche" oder "auf einem Sportplatz".
      */
-    public Raum(String beschreibung) 
+    public Raum(String beschreibung)
     {
         this.beschreibung = beschreibung;
     }
@@ -74,9 +74,29 @@ public class Raum
     /**
      * @return Die Beschreibung dieses Raums.
      */
-    public String gibBeschreibung()
-    {
+    public String gibBeschreibung() {
         return beschreibung;
+    }
+
+    public String ausgaengeToString() {
+        String out = "Aktueller Raum: " + this.beschreibung + "\n";
+        if (nordausgang != null) out += "north, ";
+        if (ostausgang  != null) out += "east, ";
+        if (suedausgang != null) out += "south, ";
+        if (westausgang != null) out += "west, ";
+        if (UpAusgang   != null) out += "up, ";
+        if (DownAusgang != null) out += "down, ";
+        return out;
+    }
+    public Raum getAusgang(String dir) {
+        if (dir.equals(null)) return null;
+        if (dir.equalsIgnoreCase("north") && nordausgang != null) return nordausgang;
+        if (dir.equalsIgnoreCase("east") && ostausgang != null) return ostausgang;
+        if (dir.equalsIgnoreCase("south") && suedausgang != null) return suedausgang;
+        if (dir.equalsIgnoreCase("west") && westausgang != null) return westausgang;
+        if (dir.equalsIgnoreCase("up") && UpAusgang != null) return UpAusgang;
+        if (dir.equalsIgnoreCase("down") && DownAusgang != null) return DownAusgang;
+        return null;
     }
 
 }
