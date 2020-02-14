@@ -56,11 +56,15 @@ public class Spiel
 
         
         // die Ausg�nge initialisieren
-        lichtung.setzeAusgaenge(null, null, null, waldstueck);
+        lichtung.setzeAusgaenge(null, null, null, waldstueck, null, piratenhoehle);
         waldstueck.setzeAusgaenge(null, lichtung, dorfplatz, null);
-        taverne.setzeAusgaenge(null, dorfplatz, null, null);
+        taverne.setzeAusgaenge(null, dorfplatz, null, null, taverne, null);
         hexenhaus.setzeAusgaenge(null, dorfplatz, null, null);
         dorfplatz.setzeAusgaenge(waldstueck, null, taverne, hexenhaus);
+        GaesteZimmer.setzeAusgaenge(null, null, null, null, null, taverne);
+        keller.setzeAusgaenge(null, null, null, geheimgang, taverne, null);
+        geheimgang.setzeAusgaenge(null, piratenhoehle, keller, null);
+        piratenhoehle.setzeAusgaenge(null, null, null, geheimgang, lichtung, null);
         aktuellerRaum = lichtung;  // das Spiel startet auf der Lichtung
     }
 
@@ -156,7 +160,7 @@ public class Spiel
     {
         if(!befehl.hatZweitesWort()) {
         	// Gibt es kein zweites Wort, wissen wir nicht, wohin...
-            System.out.println("Wohin m�chten Sie gehen?");
+            System.out.println("Wohin m�chten Sie gehen? | go <Direction> |");
             return;
         }
 
@@ -176,6 +180,12 @@ public class Spiel
         if(richtung.equals("west")) {
             naechsterRaum = aktuellerRaum.westausgang;
         }
+        if(richtung.equals("up")) {
+            naechsterRaum = aktuellerRaum.UpAusgang;
+        }
+        if(richtung.equals("down")) {
+            naechsterRaum = aktuellerRaum.DownAusgang;
+        }
 
         if (naechsterRaum == null) {
             System.out.println("Dort ist keine T�r!");
@@ -184,15 +194,12 @@ public class Spiel
             aktuellerRaum = naechsterRaum;
             System.out.println("Sie sind " + aktuellerRaum.gibBeschreibung());
             System.out.print("Ausg�nge: ");
-            if(aktuellerRaum.nordausgang != null)
-                System.out.print("north ");
-            if(aktuellerRaum.ostausgang != null)
-                System.out.print("east ");
-            if(aktuellerRaum.suedausgang != null)
-                System.out.print("south ");
-            if(aktuellerRaum.westausgang != null)
-                System.out.print("west ");
-            System.out.println();
+            if (aktuellerRaum.nordausgang   != null) System.out.print("north ");
+            if (aktuellerRaum.ostausgang    != null) System.out.print("east ");
+            if (aktuellerRaum.suedausgang   != null) System.out.print("south ");
+            if (aktuellerRaum.westausgang   != null) System.out.print("west ");
+            if (aktuellerRaum.UpAusgang     != null) System.out.println("up ");
+            if (aktuellerRaum.DownAusgang   != null) System.out.print("down ");
         }
     }
 
