@@ -76,16 +76,21 @@ public class Raum
      * @return Die Beschreibung dieses Raums.
      */
     public String gibBeschreibung() {
-        return beschreibung;
+        String s = "Sie sind " + beschreibung + "\n";
+        s += "Ausgänge: ";
+        for(String r : ausgaenge.keySet()) {
+            if(ausgaenge.get(r) != null) s += r + ",";
+        }
+        return s;
     }
 
-    public String ausgaengeToString() {
-        String out = "Aktueller Raum: " + this.beschreibung + "\n";
-        for(String s : ausgaenge.keySet()) {
-            if(ausgaenge.get(s) != null) out += s + ", ";
-        }
-        return out;
-    }
+//    public String ausgaengeToString() {
+//        String out = "Aktueller Raum: " + this.beschreibung + "\n";
+//        for(String s : ausgaenge.keySet()) {
+//            if(ausgaenge.get(s) != null) out += s + ", ";
+//        }
+//        return out;
+//    }
     public Raum getAusgang(String dir) {
         if (dir.equals(null)) return null;
         if(ausgaenge.get(dir) != null) return ausgaenge.get(dir);

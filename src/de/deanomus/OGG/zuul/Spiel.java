@@ -98,7 +98,7 @@ public class Spiel
         System.out.println("Entdecke die Welt von Zuul. Doch Vorsicht, �berall lauern Gefahren!");
         System.out.println("Tippen sie 'help', wenn Sie Hilfe brauchen.");
         System.out.println();
-        System.out.println(aktuellerRaum.ausgaengeToString());
+        System.out.println(aktuellerRaum.gibBeschreibung());
     }
 
     /**
@@ -165,7 +165,7 @@ public class Spiel
         }
         else {
             aktuellerRaum = naechsterRaum;
-            System.out.println(aktuellerRaum.ausgaengeToString());
+            System.out.println(aktuellerRaum.gibBeschreibung());
         }
     }
 
