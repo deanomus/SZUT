@@ -67,6 +67,16 @@ public class Spiel
         geheimgang.setzeAusgaenge(null, piratenhoehle, keller, null);
         piratenhoehle.setzeAusgaenge(null, null, null, geheimgang, lichtung, null);
         aktuellerRaum = lichtung;  // das Spiel startet auf der Lichtung
+
+
+        //Gegenstaende ablegen
+        lichtung.GegenstandAblegen(new Gegenstand("Korb", "Ein Weidenkorb gefüllt mit Brot", 4));
+        taverne.GegenstandAblegen(new Gegenstand("Bierkrug", "ein leckeres dunkles Pils in einem edlen Krug", 2));
+        taverne.GegenstandAblegen(new Gegenstand("Teller", "ein Teller mit deftigem Wildscheinfleisch", 5));
+        piratenhoehle.GegenstandAblegen(new Gegenstand("Schatztruhe", "eine mit Gold gefüllte Holzkiste", 40));
+        piratenhoehle.GegenstandAblegen(new Gegenstand("Schwert", "das Schwert des alten Piratenkapitäns", 10));
+        waldstueck.GegenstandAblegen(new Gegenstand("Pilz", "seltsam aussehender Pilz", 1));
+
     }
 
     /**

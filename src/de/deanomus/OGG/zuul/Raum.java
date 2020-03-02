@@ -12,7 +12,9 @@
  */
 package de.deanomus.OGG.zuul;
 
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 
 public class Raum
 {
@@ -25,6 +27,7 @@ public class Raum
 //            UpAusgang,
 //            DownAusgang;
     private HashMap<String, Raum> ausgaenge = new HashMap<String, Raum>();
+    private List<Gegenstand> gegenstaende = new ArrayList<>();
 
     /**
      * Erzeuge einen Raum mit einer Beschreibung. Ein Raum
@@ -77,7 +80,8 @@ public class Raum
      */
     public String gibBeschreibung() {
         String s = "Sie sind " + beschreibung + "\n";
-        s += "Ausgänge: " + ausgaengeToString();
+        s += "Ausgänge: " + ausgaengeToString() + "\n";
+        if (gegenstaende.size() != 0) s += "Gegenstände in diesem Raum:\n" + getGegenstaende();
         return s;
     }
 
@@ -92,6 +96,17 @@ public class Raum
         if (dir.equals(null)) return null;
         if(ausgaenge.get(dir) != null) return ausgaenge.get(dir);
         return null;
+    }
+
+    public void GegenstandAblegen(Gegenstand neuerGegenstand) {
+        gegenstaende.add(neuerGegenstand);
+    }
+    public String getGegenstaende() {
+        String out = "";
+        for (Gegenstand g : gegenstaende) {
+            out += g + "\n";
+        }
+        return out;
     }
 
 }
