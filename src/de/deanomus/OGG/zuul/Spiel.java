@@ -122,6 +122,8 @@ public class Spiel
             wechsleRaum(befehl);
         else if (befehlswort.equals("quit")) {
             moechteBeenden = beenden(befehl);
+        } else if (befehlswort.equalsIgnoreCase("look")) {
+            umsehen();
         }
         return moechteBeenden;
     }
@@ -139,7 +141,7 @@ public class Spiel
         System.out.println("Sie irren in der Welt von Zuul herum.");
         System.out.println();
         System.out.println("Ihnen stehen folgende Befehle zur Verf�gung:");
-        System.out.println("   go quit help");
+        System.out.println(parser.getAlleBefehle());
     }
 
     /**
@@ -183,5 +185,9 @@ public class Spiel
         else {
             return true;  // Das Spiel soll beendet werden.
         }
+    }
+
+    private void umsehen() {
+        System.out.println(aktuellerRaum.gibBeschreibung());
     }
 }

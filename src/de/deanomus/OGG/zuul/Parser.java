@@ -30,6 +30,10 @@ public class Parser
         leser = new Scanner(System.in);
     }
 
+    public String getAlleBefehle() {
+        return Befehlswoerter.getAlleGueltigenBefehle();
+    }
+
     /**
      * @return Den nächsten Befehl des Benutzers.
      */

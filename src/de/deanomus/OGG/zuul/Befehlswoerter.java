@@ -12,8 +12,16 @@ public class Befehlswoerter
 {
     // ein konstantes Array mit den gültigen Befehlswörtern
     private static final String gueltigeBefehle[] = {
-        "go", "quit", "help"
+        "go", "quit", "help", "look"
     };
+
+    public static String getAlleGueltigenBefehle() {
+        String out = "";
+        for(String s : gueltigeBefehle) {
+            out += s + " ";
+        }
+        return out;
+    }
 
     /**
      * Konstruktor - initialisiere die Befehlswörter.
