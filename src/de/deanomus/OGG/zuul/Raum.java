@@ -1,10 +1,10 @@
 /**
- * Diese Klasse modelliert Räume in der Welt von Zuul.
+ * Diese Klasse modelliert Rï¿½ume in der Welt von Zuul.
  * 
- * Ein "Raum" repräsentiert einen Ort in der virtuellen Landschaft des
- * Spiels. Ein Raum ist mit anderen Räumen über Ausgänge verbunden.
- * Mögliche Ausgänge liegen im Norden, Osten, Süden und Westen.
- * Für jede Richtung hält ein Raum eine Referenz auf den 
+ * Ein "Raum" reprï¿½sentiert einen Ort in der virtuellen Landschaft des
+ * Spiels. Ein Raum ist mit anderen Rï¿½umen ï¿½ber Ausgï¿½nge verbunden.
+ * Mï¿½gliche Ausgï¿½nge liegen im Norden, Osten, Sï¿½den und Westen.
+ * Fï¿½r jede Richtung hï¿½lt ein Raum eine Referenz auf den 
  * benachbarten Raum.
  * 
  * @author  Michael Kolling and David J. Barnes
@@ -31,9 +31,9 @@ public class Raum
 
     /**
      * Erzeuge einen Raum mit einer Beschreibung. Ein Raum
-     * hat anfangs keine Ausgänge.
-     * @param beschreibung enthält eine Beschreibung in der Form
-     *        "in einer Küche" oder "auf einem Sportplatz".
+     * hat anfangs keine Ausgï¿½nge.
+     * @param beschreibung enthï¿½lt eine Beschreibung in der Form
+     *        "in einer Kï¿½che" oder "auf einem Sportplatz".
      */
     public Raum(String beschreibung)
     {
@@ -41,12 +41,12 @@ public class Raum
     }
 
     /**
-     * Definiere die Ausgänge dieses Raums. Jede Richtung
-     * führt entweder in einen anderen Raum oder ist 'null'
+     * Definiere die Ausgï¿½nge dieses Raums. Jede Richtung
+     * fï¿½hrt entweder in einen anderen Raum oder ist 'null'
      * (kein Ausgang).
      * @param norden Der Nordeingang.
      * @param osten Der Osteingang.
-     * @param sueden Der Südeingang.
+     * @param sueden Der Sï¿½deingang.
      * @param westen Der Westeingang.
      */
     public void setzeAusgaenge(Raum norden, Raum osten,
@@ -80,8 +80,8 @@ public class Raum
      */
     public String gibBeschreibung() {
         String s = "Sie sind " + beschreibung + "\n";
-        s += "Ausgänge: " + ausgaengeToString() + "\n";
-        if (gegenstaende.size() != 0) s += "Gegenstände in diesem Raum:\n" + getGegenstaende();
+        s += "Ausgï¿½nge: " + ausgaengeToString() + "\n";
+        if (gegenstaende.size() != 0) s += "Gegenstï¿½nde in diesem Raum:\n" + getGegenstaende();
         return s;
     }
 
