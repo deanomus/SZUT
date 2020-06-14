@@ -27,7 +27,7 @@ public class Raum
 //            UpAusgang,
 //            DownAusgang;
     private HashMap<String, Raum> ausgaenge = new HashMap<String, Raum>();
-    private List<Gegenstand> gegenstaende = new ArrayList<>();
+    private List<Gegenstand> items = new ArrayList<>();
 
     /**
      * Erzeuge einen Raum mit einer Beschreibung. Ein Raum
@@ -81,7 +81,7 @@ public class Raum
     public String gibBeschreibung() {
         String s = "Sie sind " + beschreibung + "\n";
         s += "Ausg�nge: " + ausgaengeToString() + "\n";
-        if (gegenstaende.size() != 0) s += "Gegenst�nde in diesem Raum:\n" + getGegenstaende();
+        if (items.size() != 0) s += "Gegenst�nde in diesem Raum:\n" + getItems();
         return s;
     }
 
@@ -99,14 +99,35 @@ public class Raum
     }
 
     public void GegenstandAblegen(Gegenstand neuerGegenstand) {
-        gegenstaende.add(neuerGegenstand);
+        items.add(neuerGegenstand);
     }
-    public String getGegenstaende() {
+    public String getItems() {
         String out = "";
-        for (Gegenstand g : gegenstaende) {
+        for (Gegenstand g : items) {
             out += g + "\n";
         }
         return out;
+    }
+
+    public Gegenstand getItem(String itemName) {
+
+        for(Gegenstand g : this.items) {
+            if(g.getName().equalsIgnoreCase(itemName)) {
+                return g;
+            }
+        }
+
+
+        return null;
+    }
+
+    public boolean entferneGegenstand(Gegenstand g) {
+        if(items.contains(g)) {
+            items.remove(g);
+            return true;
+        }
+
+        return false;
     }
 
 }

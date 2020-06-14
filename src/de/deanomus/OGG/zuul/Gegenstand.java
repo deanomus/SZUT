@@ -17,4 +17,12 @@ public class Gegenstand {
         return
                 name + ", " + beschreibung + ", " + gewicht;
     }
+
+    public Integer getGewicht() {
+        return gewicht;
+    }
+
+    public String getName() {
+        return name;
+    }
 }

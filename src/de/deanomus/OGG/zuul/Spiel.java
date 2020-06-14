@@ -21,7 +21,7 @@ package de.deanomus.OGG.zuul;
 public class Spiel 
 {
     private Parser parser;
-    private Raum aktuellerRaum;
+    private Spieler player;
         
     /**
      * Erzeuge ein Spiel und initialisiere die interne Raumkarte.
@@ -66,7 +66,9 @@ public class Spiel
         keller.setzeAusgaenge(null, null, null, geheimgang, taverne, null);
         geheimgang.setzeAusgaenge(null, piratenhoehle, keller, null);
         piratenhoehle.setzeAusgaenge(null, null, null, geheimgang, lichtung, null);
-        aktuellerRaum = lichtung;  // das Spiel startet auf der Lichtung
+
+        //init  player
+        player = new Spieler("Hans", lichtung, 50);
 
 
         //Gegenstaende ablegen
@@ -108,7 +110,7 @@ public class Spiel
         System.out.println("Entdecke die Welt von Zuul. Doch Vorsicht, �berall lauern Gefahren!");
         System.out.println("Tippen sie 'help', wenn Sie Hilfe brauchen.");
         System.out.println();
-        System.out.println(aktuellerRaum.gibBeschreibung());
+        System.out.println(player.getAktuellerRaum().gibBeschreibung());
     }
 
     /**
@@ -170,14 +172,14 @@ public class Spiel
         String richtung = befehl.gibZweitesWort();
 
         // Wir versuchen den Raum zu verlassen.
-        Raum naechsterRaum = aktuellerRaum.getAusgang(richtung);
+        Raum naechsterRaum = player.getAktuellerRaum().getAusgang(richtung);
 
         if (naechsterRaum == null) {
             System.out.println("Dort ist keine T�r!");
         }
         else {
-            aktuellerRaum = naechsterRaum;
-            System.out.println(aktuellerRaum.gibBeschreibung());
+            player.geheZu(naechsterRaum);
+            System.out.println(player.getAktuellerRaum().gibBeschreibung());
         }
     }
 
@@ -198,6 +200,6 @@ public class Spiel
     }
 
     private void umsehen() {
-        System.out.println(aktuellerRaum.gibBeschreibung());
+        System.out.println(player.getAktuellerRaum().gibBeschreibung());
     }
 }
