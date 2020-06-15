@@ -122,12 +122,10 @@ public class Raum
     }
 
     public boolean entferneGegenstand(Gegenstand g) {
-        if(items.contains(g)) {
+        Boolean exists;
+        exists = items.contains(g);
+        if(exists)
             items.remove(g);
-            return true;
-        }
-
-        return false;
+        return exists;
     }
-
 }
