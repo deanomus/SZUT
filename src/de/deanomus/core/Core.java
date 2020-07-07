@@ -74,7 +74,8 @@ public class Core {
                     "2 = GameOfLife\n" +
                     "3 = Fussball-Manager\n" +
                     "4 = RDM-Tester\n" +
-                    "5 = Zuul"
+                    "5 = Zuul\n" +
+                    "6 = Sortieralgorithmen"
             );
         } else System.out.println("Oops, Fehler! Keine Aufgaben fuer diese Kategorie gefunden :/");
 
@@ -112,6 +113,7 @@ public class Core {
         if(kate == 4 && aufg == 3) FussballVersion.start();
         if(kate == 4 && aufg == 4) de.deanomus.trash.rdmTester.start();
         if(kate == 4 && aufg == 5) de.deanomus.OGG.zuul.Programm.main();
+        if(kate == 4 && aufg == 6) de.deanomus.OGG.sortieralgorithmen.Sortieralgo.start();
         // -> Exit
         if(kate == 0 && aufg == 0) return;
 
