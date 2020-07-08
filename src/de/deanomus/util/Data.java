@@ -38,6 +38,30 @@ public class Data {
         return false;
     }
 
+    public static String ArrayToString(String[] array) { return ArrayToString(array, ", "); }
+    public static String ArrayToString(int[] array, String seperator) { return ArrayToString(changeArray(array), seperator); }
+    public static String ArrayToString(int[] array) { return ArrayToString(changeArray(array), ", "); }
+
+
+    public static String ArrayToString(String[] array, String seperator) {
+        String out = "";
+        for (int i = 0; i < array.length; i++) {
+            out += array[i];
+            if(i != array.length-1)
+                out += seperator;
+        }
+        return out;
+    }
+
+    public static String[] changeArray(int[] array) {
+        String[] out = new String[array.length];
+        for (int i = 0; i < array.length; i++) {
+            out[i] = String.valueOf(array[i]);
+        }
+        return out;
+    }
+
+
     public static int rdmInt(int min, int max) {
         Random r = new Random();
         int genInt = r.nextInt((max - min) + 1) + min;
