@@ -25,7 +25,7 @@ public class Sortieralgo {
     private static void bubblesorttest() {
         //int[] t = {2,6,3,7,8,1,3,5,8,9,5,3};
         //int[] t = {9,8,7,6,5,4,3,2,1};
-        int[] t = rdmarray(973, 1, 5000000);
+        int[] t = rdmarray(1000, 1, 999999);
 
 
         Bubblesort b = new Bubblesort(t);
