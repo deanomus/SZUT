@@ -14,11 +14,33 @@ public class Sortieralgo {
         println("Which to start?:");
         println("0 = Quit, 1 = Bubblesort, 2 = Selectionsort, 3 = Insertionsort, 4 = Quicksort");
         int i = Data.intScan(scan);
-        if (i == 1) println("Bubblesort");
+        if (i == 1) bubblesorttest();
         if (i == 2) println("Selectionsort");
         if (i == 3) println("Insertionsort");
         if (i == 4) println("Quicksort");
+        if (i == 5) test();
         if (i != 0) start();
+    }
+
+    private static void bubblesorttest() {
+        //int[] t = {2,6,3,7,8,1,3,5,8,9,5,3};
+        //int[] t = {9,8,7,6,5,4,3,2,1};
+        int[] t = rdmarray(973, 1, 5000000);
+
+
+        Bubblesort b = new Bubblesort(t);
+
+        println("Vorher: " + Data.ArrayToString(b.getArray()));
+
+        String finish = Data.ArrayToString(b.sort().getArray());
+
+        println("\nFertig(" + b.getDurchgaenge() + "): " + finish);
+
+    }
+
+    private static void test() {
+        int[] t = {2,6,3,7,8,1,3,5,8,9,5,3};
+        println("Test Out: " + Data.ArrayToString(t));
     }
 
 
@@ -27,6 +49,16 @@ public class Sortieralgo {
             System.out.println("");
         }
     }
+
+    private static int[] rdmarray(int length, int min, int max) {
+        int[] arr = new int[length];
+        for (int i = 0; i < length; i++) {
+            arr[i] = Data.rdmInt(min, max);
+        }
+
+        return arr;
+    }
+
     private static void println(String text) {
         System.out.println(text);
     }
