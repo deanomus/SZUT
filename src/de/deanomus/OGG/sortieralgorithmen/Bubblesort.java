@@ -30,12 +30,12 @@ public class Bubblesort {
 
 
                     if (array[i] > array[i+1]) {
-                        System.out.println(counter + ", Change (1): " + Data.ArrayToString(array));
+                        System.out.println("[D: " + durchgaenge + ", C: " + counter + "] Change (1): " + Data.ArrayToString(array));
                         counter = 0;
                         temp = array[i];
                         array[i] = array[i+1];
                         array[i+1] = temp;
-                        System.out.println(counter + ", Change (2): " + Data.ArrayToString(array));
+                        System.out.println("[D: " + durchgaenge + ", C: " + counter + "] Change (2): " + Data.ArrayToString(array));
                     }
 
                 }
