@@ -25,10 +25,10 @@ public class Sortieralgo {
     private static void bubblesorttest() {
         //int[] t = {2,6,3,7,8,1,3,5,8,9,5,3};
         //int[] t = {9,8,7,6,5,4,3,2,1};
-        int[] t = rdmarray(1000, 1, 999999);
+        int[] array = rdmarray(100, 1, 200);
 
 
-        Bubblesort b = new Bubblesort(t);
+        Bubblesort b = new Bubblesort(array);
 
         println("Vorher: " + Data.ArrayToString(b.getArray()));
 
