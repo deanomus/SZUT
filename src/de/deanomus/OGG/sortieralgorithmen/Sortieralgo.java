@@ -2,6 +2,7 @@ package de.deanomus.OGG.sortieralgorithmen;
 
 import de.deanomus.core.Core;
 import de.deanomus.util.Data;
+import de.deanomus.util.ProgressBar;
 
 import java.util.Scanner;
 
@@ -12,7 +13,11 @@ public class Sortieralgo {
     public static void start() {
         println(2);
         println("Which to start?:");
-        println("0 = Quit, 1 = Bubblesort, 2 = Selectionsort, 3 = Insertionsort, 4 = Quicksort");
+        println("0 = Quit, " +
+                "1 = Bubblesort, " +
+                "2 = Selectionsort, " +
+                "3 = Insertionsort, " +
+                "4 = Quicksort");
         int i = Data.intScan(scan);
         if (i == 1) bubblesorttest();
         if (i == 2) println("Selectionsort");
@@ -25,14 +30,18 @@ public class Sortieralgo {
     private static void bubblesorttest() {
         //int[] t = {2,6,3,7,8,1,3,5,8,9,5,3};
         //int[] t = {9,8,7,6,5,4,3,2,1};
-        int[] array = rdmarray(100, 1, 200);
+        int[] array = {0, 0, 0};
+        for (int i = 0; i < 10000; i++) {
+            array = rdmarray(599989, 1, 99999916, false);
+            System.out.println("finished");
+        }
 
 
         Bubblesort b = new Bubblesort(array);
 
         println("Vorher: " + Data.ArrayToString(b.getArray()));
 
-        String finish = Data.ArrayToString(b.sort().getArray());
+        String finish = Data.ArrayToString(b.DebugMessages(true).sort().getArray());
 
         println("\nFertig(" + b.getDurchgaenge() + "): " + finish);
 
@@ -51,8 +60,23 @@ public class Sortieralgo {
     }
 
     private static int[] rdmarray(int length, int min, int max) {
+        return rdmarray(length, min, max, true);
+    }
+
+    private static int[] rdmarray(int length, int min, int max, Boolean progressInfo) {
+        ProgressBar bar = null;
+        if (progressInfo) {
+            bar = new ProgressBar(length);
+            bar
+                    .showPercent(true)
+                    .showStats(true);
+        }
+
         int[] arr = new int[length];
         for (int i = 0; i < length; i++) {
+            if (progressInfo) {
+                bar.setNow(i);
+            }
             arr[i] = Data.rdmInt(min, max);
         }
 
