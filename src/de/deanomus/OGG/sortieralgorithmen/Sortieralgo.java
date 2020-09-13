@@ -3,6 +3,7 @@ package de.deanomus.OGG.sortieralgorithmen;
 import de.deanomus.core.Core;
 import de.deanomus.util.Data;
 import de.deanomus.util.ProgressBar;
+import de.deanomus.util.exceptions.ArrayCannotBeNullException;
 
 import java.util.Scanner;
 
@@ -20,7 +21,7 @@ public class Sortieralgo {
                 "4 = Quicksort");
         int i = Data.intScan(scan);
         if (i == 1) bubblesorttest();
-        if (i == 2) println("Selectionsort");
+        if (i == 2) SelectionsortTest();
         if (i == 3) println("Insertionsort");
         if (i == 4) println("Quicksort");
         if (i == 5) test();
@@ -30,11 +31,7 @@ public class Sortieralgo {
     private static void bubblesorttest() {
         //int[] t = {2,6,3,7,8,1,3,5,8,9,5,3};
         //int[] t = {9,8,7,6,5,4,3,2,1};
-        int[] array = {0, 0, 0};
-        for (int i = 0; i < 10000; i++) {
-            array = rdmarray(599989, 1, 99999916, false);
-            System.out.println("finished");
-        }
+        int[] array = rdmarray(10, 1, 99, false);
 
 
         Bubblesort b = new Bubblesort(array);
@@ -47,8 +44,22 @@ public class Sortieralgo {
 
     }
 
+    private static void SelectionsortTest() {
+        int[] array = rdmarray(10, 1, 99, false);
+
+        Selectionsort sortAlgo = new Selectionsort();
+        sortAlgo
+                .setDirection(Direction.downToUp);
+
+        try {
+            sortAlgo.sortArray();
+        } catch (ArrayCannotBeNullException e) {
+            e.printStackTrace();
+        }
+    }
+
     private static void test() {
-        int[] t = {2,6,3,7,8,1,3,5,8,9,5,3};
+        int[] t = {2, 6, 3, 7, 8, 1, 3, 5, 8, 9, 5, 3};
         println("Test Out: " + Data.ArrayToString(t));
     }
 
