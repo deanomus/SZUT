@@ -74,7 +74,8 @@ public class Core {
                             "3 = Fussball-Manager\n" +
                             "4 = RDM-Tester\n" +
                             "5 = Zuul\n" +
-                            "6 = Sortieralgorithmen"
+                            "6 = Sortieralgorithmen\n" +
+                            "7 = MD5Hash"
             );
         } else System.out.println("Oops, Fehler! Keine Aufgaben fuer diese Kategorie gefunden :/");
 
@@ -113,6 +114,7 @@ public class Core {
         if (kate == 4 && aufg == 4) de.deanomus.FirstLehrjahr.trash.rdmTester.start();
         if (kate == 4 && aufg == 5) de.deanomus.FirstLehrjahr.OGG.zuul.Programm.main();
         if (kate == 4 && aufg == 6) de.deanomus.FirstLehrjahr.OGG.sortieralgorithmen.Sortieralgo.start();
+        if (kate == 4 && aufg == 7) de.deanomus.FirstLehrjahr.trash.ToMD5Hash.start();
         // -> Exit
         if (kate == 0 && aufg == 0) return;
 

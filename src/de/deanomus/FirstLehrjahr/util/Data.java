@@ -15,6 +15,10 @@ public class Data {
     static HashMap<Integer, String> DebugMessages = new HashMap<Integer, String>();
     static Scanner scan = Core.scan;
 
+    public static String scan (Scanner scan) {
+        return scan.next();
+    }
+
     public static int intScan(Scanner scan) {
         Integer i = null;
         while(i == null) {
@@ -31,6 +35,27 @@ public class Data {
             return i;
         } else return -1;
 
+    }
+
+    /**
+     * Generate md5 hash from given text
+     * Source: https://stackoverflow.com/questions/415953/how-can-i-generate-an-md5-hash
+     *
+     * @param string
+     * @return
+     */
+    public static String md5hash(String string) {
+        try {
+            java.security.MessageDigest md = java.security.MessageDigest.getInstance("MD5");
+            byte[] array = md.digest(string.getBytes());
+            StringBuffer sb = new StringBuffer();
+            for (int i = 0; i < array.length; ++i) {
+                sb.append(Integer.toHexString((array[i] & 0xFF) | 0x100).substring(1,3));
+            }
+            return sb.toString();
+        } catch (java.security.NoSuchAlgorithmException e) {
+        }
+        return null;
     }
 
     public static boolean possible2Convert(String number) {
