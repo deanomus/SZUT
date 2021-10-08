@@ -2,3 +2,4 @@ out/production
 /.idea
 .idea/workspace.xml
 /src/META-INF/
+*.DS_Store
