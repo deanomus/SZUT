@@ -2,3 +2,4 @@ out/production
 .idea/
 /src/META-INF/
 out/
+**.DS_Store
