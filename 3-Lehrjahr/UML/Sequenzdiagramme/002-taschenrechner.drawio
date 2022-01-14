@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2022-01-14T09:51:36.852Z" agent="5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/97.0.4692.71 Safari/537.36" etag="hgWYvu9clzLu8Hav1eP6" version="15.9.6" type="github">
+<mxfile host="app.diagrams.net" modified="2022-01-14T10:13:26.921Z" agent="5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/97.0.4692.71 Safari/537.36" etag="L1omsvVHnGZc9k9Ay98x" version="15.9.6" type="github" pages="2">
   <diagram id="ZqRQ5VkeZqiA2t7ABY4D" name="my-solution">
     <mxGraphModel dx="556" dy="361" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -90,6 +90,53 @@
             <mxPoint x="375" y="600" as="sourcePoint" />
             <mxPoint x="374.71000000000004" y="490" as="targetPoint" />
           </mxGeometry>
+        </mxCell>
+        <mxCell id="V4FmYQ2eOWTOJBM8IF6M-1" value="&lt;font style=&quot;font-size: 13px&quot;&gt;&lt;b&gt;SPOILER:&lt;br&gt;ABSOLUT FALSCH! SIEHE MUSTERLÖSUNG!&lt;/b&gt;&lt;/font&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=8;" vertex="1" parent="1">
+          <mxGeometry x="165" y="230" width="220" height="120" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="I0icmkzqHwohbQtQOhYp" name="muster-solution">
+    <mxGraphModel dx="1437" dy="396" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="XU2fqCykjProLwcebnMo-0" />
+        <mxCell id="XU2fqCykjProLwcebnMo-1" parent="XU2fqCykjProLwcebnMo-0" />
+        <mxCell id="6Lv_JJJemTBI_aj4xngX-1" value="Client" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;" vertex="1" parent="XU2fqCykjProLwcebnMo-1">
+          <mxGeometry x="270" y="170" width="30" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="6Lv_JJJemTBI_aj4xngX-4" value="" style="endArrow=none;dashed=1;html=1;rounded=0;" edge="1" parent="XU2fqCykjProLwcebnMo-1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="285" y="270" as="sourcePoint" />
+            <mxPoint x="284.5" y="230" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="6Lv_JJJemTBI_aj4xngX-5" value="" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="XU2fqCykjProLwcebnMo-1">
+          <mxGeometry x="280" y="270" width="10" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="6Lv_JJJemTBI_aj4xngX-7" value="" style="endArrow=open;html=1;rounded=0;dashed=1;endFill=0;" edge="1" parent="XU2fqCykjProLwcebnMo-1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="290" y="277" as="sourcePoint" />
+            <mxPoint x="340" y="277" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="6Lv_JJJemTBI_aj4xngX-19" value="Substraction" style="rounded=0;whiteSpace=wrap;html=1;fontSize=8;" vertex="1" parent="XU2fqCykjProLwcebnMo-1">
+          <mxGeometry x="340" y="270" width="50" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="6Lv_JJJemTBI_aj4xngX-21" value="" style="endArrow=none;dashed=1;html=1;rounded=0;" edge="1" parent="XU2fqCykjProLwcebnMo-1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="365" y="400" as="sourcePoint" />
+            <mxPoint x="364.6800000000001" y="290" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="6Lv_JJJemTBI_aj4xngX-22" value="" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="XU2fqCykjProLwcebnMo-1">
+          <mxGeometry x="450" y="300" width="10" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="6Lv_JJJemTBI_aj4xngX-23" value="Actor" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;fontSize=8;" vertex="1" parent="XU2fqCykjProLwcebnMo-1">
+          <mxGeometry x="440" y="170" width="30" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="5E4oeL3s4RU_wQmwiwaq-0" value="Siehe:&lt;br&gt;&lt;font style=&quot;font-size: 7px&quot;&gt;https://uml.szut.dev/svg/fL1B3e8m4DrpYbaYIA8XQCA23JUG4zGw8Oq539sQS7kBaBQ0h5mrqtc_UUefsXVhMGEA1ecW6wce5vm2nacy6I6KKc1BmVH0aXG5LFfkK2EYQo6AxAw0aack9QEkXpZEGI6vdyfG2EiXL1xz47YKh_Zizq2Nm2BsdVWyOfXcroDabwNmAlCEOu6PmbYD7DBJsK_bWrTUsnPkgBIaq4ZyEDYV_wzZTAojurw_ctCSx0C0&lt;/font&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=13;" vertex="1" parent="XU2fqCykjProLwcebnMo-1">
+          <mxGeometry x="354" y="60" width="60" height="30" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
