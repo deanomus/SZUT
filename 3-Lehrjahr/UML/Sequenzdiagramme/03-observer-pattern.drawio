@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2022-01-28T09:13:36.439Z" agent="5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/97.0.4692.99 Safari/537.36" etag="EL0YSbI3GshfIyD3yqWL" version="16.2.6" type="github">
+<mxfile host="app.diagrams.net" modified="2022-01-28T09:58:16.542Z" agent="5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/97.0.4692.99 Safari/537.36" etag="Q03Q_p5ofPxqs__XlgDs" version="16.2.6" type="github" pages="2">
   <diagram id="4quVsk186itmyTQYKocA" name="my solution">
     <mxGraphModel dx="823" dy="534" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -180,6 +180,14 @@
         <mxCell id="rXW5a8TmXSSuuKJ7be5A-58" value="" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
           <mxGeometry x="424" y="360" width="10" height="20" as="geometry" />
         </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="jBR92NAo6h_GRnxQj0RY" name="muster-solution">
+    <mxGraphModel dx="946" dy="614" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="PFr3XhzWD_xK2k2NODVh-0" />
+        <mxCell id="PFr3XhzWD_xK2k2NODVh-1" parent="PFr3XhzWD_xK2k2NODVh-0" />
       </root>
     </mxGraphModel>
   </diagram>
